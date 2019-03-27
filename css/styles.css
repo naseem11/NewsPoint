@@ -1,0 +1,76 @@
+/*=========== Default Theme ==============
+ 
+ Fonts : Raleway, Open Sans.
+ -----------------------------
+ Colors :
+       Moon Yellow : #f4c613
+       Gray:         #212226
+       White Smoke : #f4f4f4
+       White :       #fff
+       Black :       #000
+--------------------------------
+=============================================*/
+
+
+
+/* ======================================
+        Html, Body
+   ====================================== */
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+}
+main{
+    width:80%;
+    margin:0 auto;
+}
+
+
+ /* ===================================== */
+
+/* ======================================
+                 Header
+   ====================================== */
+header{
+    min-width: 100%;
+    height:150px; 
+    background-color:green;
+}
+
+
+
+
+
+
+
+/* ======================================
+                 Media Queries
+   ====================================== */
+   
+  /* Small devices (landscape phones, 576px and up) */
+@media only screen 
+and (min-width: 320px) {  
+ 
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media only screen 
+and (min-width: 768px) {  
+    
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media only screen 
+and (min-width: 992px) {  
+   
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen 
+and (min-width: 1200px) {  
+    
+}
