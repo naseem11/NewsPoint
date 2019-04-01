@@ -66,7 +66,7 @@ header h1{
     
 }
 
-header h1::after{
+header h1::after {
     
     content:'';
     display: block;
@@ -110,30 +110,60 @@ nav{
     background-color: #420039;
     color:#fff;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 40px;;
     align-items: center;
 }
 
 
 nav ul{
+   
     width:100%;   
     background-color: #000;
     position: absolute;
     top:80px;
     left:-100%;   
     margin:0 ;
+    padding-top: 70px ;
+    padding-left: 0;
+    opacity: .85;
     list-style:none;      
-    height: calc(100% - 80px);  
+    height: calc(100% - 80px);     
     transition: all .5s ease-in ;
+
     
     
 }
+
+nav ul li{
+
+    border-bottom: 1px solid #3c3c3c;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    
+   
+}
+
+
+
 
 nav ul li a{
     color:#fff;
     text-decoration: none;
+    font-size: 18px;   
+    letter-spacing: 2px;
+    display:inline-block;
+    padding:10px;
+    border-radius: 10px;
 }
 
+.link-active{
+
+    background-color: #fff;    
+    color:#850e75;
+}
 .menu-bar{
     
     display: block;
@@ -167,25 +197,15 @@ nav ul li a{
 .logo{
     font-size: 20px;
     letter-spacing: 2px;
-    text-shadow: 0 0 5px #000;
-    
+    text-shadow: 0 0 5px #000;    
 }
 .search{
-    
-    padding-right:20px;
+    font-size: 20px;
 }
-
-
 .appear{
     
     left:0;
 }
-
-
-
-
-
-
 
 /* ===================================== */
 
@@ -207,6 +227,42 @@ and (min-width: 768px) {
     header{
         display: block;
     }
+    #menu-btn, .logo{
+        display: none;
+    }
+
+    
+    
+    nav ul{
+       
+        width:80%; 
+        padding-top: 0;        
+        position:static;       
+        display: flex;          
+        justify-content: space-between;
+        align-items: center;
+        transition: none;         
+        
+       
+    }
+
+   nav ul li{
+    border:none;
+    margin:0;
+    padding:0;
+   
+   }
+
+
+
+
+    nav ul li a{        
+      font-size: 20px;
+              
+    }
+
+   
+    
 }
 
 /* Large devices (desktops, 992px and up) */
