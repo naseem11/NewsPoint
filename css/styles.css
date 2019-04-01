@@ -139,7 +139,7 @@ nav ul{
 nav ul li{
 
     border-bottom: 1px solid #3c3c3c;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding-bottom: 10px;
     padding-left: 30px;
     
@@ -163,6 +163,7 @@ nav ul li a{
 
     background-color: #fff;    
     color:#850e75;
+   
 }
 .menu-bar{
     
@@ -171,7 +172,7 @@ nav ul li a{
     height: 3px;
     margin-bottom:5px;
     background-color: #fff;
-    transition:all .5s;
+    transition:all .4s;
     
 }
 #menu-btn.active .menu-bar:nth-child(2){
@@ -237,7 +238,8 @@ and (min-width: 768px) {
        
         width:80%; 
         padding-top: 0;        
-        position:static;       
+        position:static; 
+        opacity: 1;       
         display: flex;          
         justify-content: space-between;
         align-items: center;
