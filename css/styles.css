@@ -1,21 +1,21 @@
 /*=========== Default Theme ==============
- 
- Fonts : Raleway, Open Sans.
- -----------------------------
- Colors :
-       Moon Yellow : #f4c613
-       Gray:         #212226
-       White Smoke : #f4f4f4
-       White :       #fff
-       Black :       #000
+
+Fonts : Raleway, Open Sans.
+-----------------------------
+Colors :
+Moon Yellow : #f4c613
+Gray:         #212226
+White Smoke : #f4f4f4
+White :       #fff
+Black :       #000
 --------------------------------
 =============================================*/
 
 
 
 /* ======================================
-        Html, Body
-   ====================================== */
+Html, Body
+====================================== */
 
 
 *{
@@ -36,11 +36,11 @@ main{
     transform: translate(-50% ,-50%);
 }
 
- /* ===================================== */
+/* ===================================== */
 
 /* ======================================
-                 Header
-   ====================================== */
+Header
+====================================== */
 header{
     min-width: 100%;
     height:150px; 
@@ -53,7 +53,7 @@ header{
 }
 
 header h1{
-
+    
     width:50%;
     color:#fff;
     margin-top:0;  
@@ -62,12 +62,12 @@ header h1{
     text-shadow: 0 0 20px #000;
     
     
-   
-
+    
+    
 }
 
 header h1::after{
-
+    
     content:'';
     display: block;
     width:150px;
@@ -79,19 +79,19 @@ header h1::after{
     left:50%;
     transform: translate(-50% ,-50%);
     
-
+    
     
 }
 .date-time{
-
-   
-   position: relative;
-   top:35px;   
-   color:#fff;
-   text-shadow: 0 0 5px #000;
-   letter-spacing: 2px;
-   
-   
+    
+    
+    position: relative;
+    top:35px;   
+    color:#fff;
+    text-shadow: 0 0 5px #000;
+    letter-spacing: 2px;
+    
+    
 }
 
 /* ===================================== */
@@ -100,31 +100,33 @@ header h1::after{
 
 
 /* ======================================
-                 Navbar
-   ====================================== */
+Navbar
+====================================== */
 
 nav{
-
+    
     min-width: 100%;
     height: 80px;
     background-color: #420039;
     color:#fff;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 
 nav ul{
-
+    width:100%;   
+    background-color: #000;
+    position: absolute;
+    top:80px;
+    left:-100%;   
     margin:0 ;
-    list-style:none;
-    padding: 0 0 0 30px;   
-    width:100%;
-    height: calc(100% - 53px);
-    font-size: 20px;
-   
-   
+    list-style:none;      
+    height: calc(100% - 80px);  
+    transition: all .5s ease-in ;
+    
+    
 }
 
 nav ul li a{
@@ -132,57 +134,55 @@ nav ul li a{
     text-decoration: none;
 }
 
-#menu-btn{
-
-    padding-left:20px;  
-    font-size: 30px;
-    cursor: pointer;
-}
-.logo{
-    font-size: 23px;
-    letter-spacing: 2px;
-    text-shadow: 0 0 5px #000;
-
-}
-.search{
-
-padding-right:20px;
-}
-
-.menu-panel{       
-    width:100%;
-    height: 100%;
-    background-color: #000;
-    position: absolute;
-    top:0;
-    left:-100%;
-    transition: all .5s ease-in ;
-
+.menu-bar{
+    
+    display: block;
+    width:30px;
+    height: 3px;
+    margin-bottom:5px;
+    background-color: #fff;
+    transition:all .5s;
     
 }
+#menu-btn.active .menu-bar:nth-child(2){
+    
+    opacity:0;
+}
+
+
+
+#menu-btn.active .menu-bar:nth-child(1){
+    
+    transform:translateY(12px) rotate(45deg);
+}
+
+
+#menu-btn.active .menu-bar:nth-child(3){
+    
+    transform: translateY(-4px)rotate(-45deg);
+}
+
+
+
+.logo{
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #000;
+    
+}
+.search{
+    
+    padding-right:20px;
+}
+
 
 .appear{
     
     left:0;
 }
 
-#menu-close-btn{
 
-    position: relative;
-    top:8px;
-    left:90%;;
-    width:45px;
-    height: 45px;
-    font-size: 45px;   
-    color:#fff;
-    transition: transform .1s ease-out ;
-   
-}
-#menu-close-btn:hover{
 
-    transform: scale(1.2);
-    cursor: pointer;
-}
 
 
 
@@ -192,15 +192,15 @@ padding-right:20px;
 
 
 /* ======================================
-                 Media Queries
-   ====================================== */
-   
-  /* Small devices (landscape phones, 576px and up) */
+Media Queries
+====================================== */
+
+/* Small devices (landscape phones, 576px and up) */
 @media only screen 
 and (min-width: 320px) {  
- 
+    
 }
- 
+
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media only screen 
 and (min-width: 768px) {  
@@ -208,13 +208,13 @@ and (min-width: 768px) {
         display: block;
     }
 }
- 
+
 /* Large devices (desktops, 992px and up) */
 @media only screen 
 and (min-width: 992px) {  
-   
+    
 }
- 
+
 /* Extra large devices (large desktops, 1200px and up) */
 @media only screen 
 and (min-width: 1200px) {  

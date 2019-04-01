@@ -1,9 +1,9 @@
 export const userInterface=function(){
     const dateDiv=document.querySelector('header .date-time');
     const menuBtn=document.getElementById('menu-btn');
-    const menuPanel=document.querySelector('.menu-panel');
-    const menuCloseBtn=document.getElementById('menu-close-btn');
-    console.log(menuPanel);
+    const menuPanel=document.querySelector('nav ul');
+   
+   
 
     function init(){
          
@@ -58,18 +58,15 @@ export const userInterface=function(){
     function _addEventListeners(){
 
         menuBtn.addEventListener('click',_makeMenuPanelAppear);
-        menuCloseBtn.addEventListener('click', _closeMenuPanel)
+        
     }
 
    function _makeMenuPanelAppear(){
-
-        menuPanel.classList.add('appear');
+        menuBtn.classList.toggle('active');
+        menuPanel.classList.toggle('appear');
     }
 
-    function _closeMenuPanel(){
-
-        menuPanel.classList.remove('appear');
-    }
+    
     return {init};
 }();
 
