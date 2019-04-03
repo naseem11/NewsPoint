@@ -23,10 +23,12 @@ Black :       #000
 }
 body{
     margin:0;
+   
 }
 /* main{
     width:80%;
     margin:0 auto;
+    
 } */
 
 .center{
@@ -151,12 +153,11 @@ nav ul li{
 
 nav ul li a{
     color:#fff;
-    text-decoration: none;
-    font-size: 16px;   
+    text-decoration: none;    
     letter-spacing: 2px;
     display:inline-block;
     padding:8px;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
     border-radius: 10px;
 }
 
@@ -219,11 +220,12 @@ nav ul li a{
     position:relative;
     width: 100%;
     height: 200px;
+   
     
 }
-/* .news{
+.news{
     display:none;
-} */
+}
 
 .news, .news-image, .news-image img , .news-overlay{
     width: inherit;
@@ -243,7 +245,7 @@ nav ul li a{
     position: absolute;
     top:0;
     left:0;
-    opacity: .3;
+    opacity: .5;
 }
 .news-overlay h2{
 
