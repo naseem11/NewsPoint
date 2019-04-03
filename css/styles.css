@@ -139,6 +139,12 @@ nav ul{
     
 }
 
+.appear{
+    
+    left:0;
+}
+
+
 nav ul li{
 
     border-bottom: 1px solid #3c3c3c;
@@ -202,28 +208,28 @@ nav ul li a{
     letter-spacing: 2px;
     text-shadow: 0 0 5px #000;    
 }
+
+/* Search button and input field */
 .search{
     font-size: 20px;
 }
 .search-input{
 
-    position: fixed;
-    top:-50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    position:fixed;
+    top:-100%;
+    left:0;    
     width: 100%;
-    height: 200px;
+    height:100%;
     z-index:15;
     background-color: #000;
-    opacity: .85;
-    transition: all .5s ease-in;
+    opacity: .95;
+    transition: all .3s ease-in;
 }
 
 #search-close-btn{
 
     color:#fff;
-    font-size:40px;    
-   
+    font-size:40px;   
     display: block;
     text-align: right;
     padding-right:30px;
@@ -234,8 +240,11 @@ nav ul li a{
 }
 
 #input-fields{
-    text-align: center;
-    line-height: 90px;
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+  
 }
 
 #user-input{
@@ -271,14 +280,12 @@ nav ul li a{
 
 .search-input-active{
 
-    top:50%;
+    top:0;
    
 }
 
-.appear{
-    
-    left:0;
-}
+/* ========================================= */
+
 
 /* ===================================== */
 
