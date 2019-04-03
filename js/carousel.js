@@ -12,12 +12,12 @@ export const Carousel=function(){
     
     function _initialize(){
         _showSlide(slideIndex);
-        _addEventsListeners();
+        _addEventListeners();
         
         
     }
     
-    function _addEventsListeners(){
+    function _addEventListeners(){
         
         nextPreviousLinks.forEach((el)=>{
             el.addEventListener('click',_nextSlide);

@@ -3,7 +3,10 @@ export const userInterface = function () {
 	const menuBtn = document.getElementById('menu-btn');
 	const menuPanel = document.querySelector('nav ul');
 	const menuLinks = document.querySelectorAll('nav ul li a');
-
+	const navSearchIcon=document.querySelector('.fa-search');
+	const searchInput=document.querySelector('.search-input');
+	const searchCloseBtn=document.getElementById('search-close-btn');
+	
 
 	function init() {
 
@@ -56,6 +59,8 @@ export const userInterface = function () {
 	function _addEventListeners() {
 
 		menuBtn.addEventListener('click', _makeMenuPanelAppear);
+		navSearchIcon.addEventListener('click',_makeSearchAppearOrDisappear	);
+		searchCloseBtn.addEventListener('click',_makeSearchAppearOrDisappear);
 
 		if (window.screen.width < 768) {
 
@@ -80,6 +85,11 @@ export const userInterface = function () {
 	function _makeMenuPanelAppear() {
 		menuBtn.classList.toggle('menu-active');
 		menuPanel.classList.toggle('appear');
+	}
+
+	function _makeSearchAppearOrDisappear(){
+		
+		searchInput.classList.toggle('search-input-active');
 	}
 
 
