@@ -126,7 +126,7 @@ nav ul{
     left:-100%;   
     z-index: 10;
     margin:0 ;
-    padding-top: 70px ;
+    padding-top: 50px ;
     padding-left: 0;
     opacity: .85;
     list-style:none;      
@@ -141,7 +141,7 @@ nav ul li{
 
     border-bottom: 1px solid #3c3c3c;
     margin-bottom: 20px;    
-    padding-left: 30px;
+    padding-left: 20px;
     
    
 }
@@ -176,20 +176,20 @@ nav ul li a{
     transition:all .4s;
     
 }
-#menu-btn.active .menu-bar:nth-child(2){
+#menu-btn.menu-active .menu-bar:nth-child(2){
     
     opacity:0;
 }
 
 
 
-#menu-btn.active .menu-bar:nth-child(1){
+#menu-btn.menu-active .menu-bar:nth-child(1){
     
     transform:translateY(12px) rotate(45deg);
 }
 
 
-#menu-btn.active .menu-bar:nth-child(3){
+#menu-btn.menu-active .menu-bar:nth-child(3){
     
     transform: translateY(-4px)rotate(-45deg);
 }

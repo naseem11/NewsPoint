@@ -78,7 +78,7 @@ export const userInterface = function () {
 	}
 
 	function _makeMenuPanelAppear() {
-		menuBtn.classList.toggle('active');
+		menuBtn.classList.toggle('menu-active');
 		menuPanel.classList.toggle('appear');
 	}
 
