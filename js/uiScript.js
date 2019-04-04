@@ -1,5 +1,5 @@
 export const userInterface = function () {
-	const dateDiv = document.querySelector('header .date-time');
+	const dateDiv = document.querySelector('.date-time');
 	const menuBtn = document.getElementById('menu-btn');
 	const menuPanel = document.querySelector('nav ul');
 	const menuLinks = document.querySelectorAll('nav ul li a');

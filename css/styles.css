@@ -86,6 +86,7 @@ header h1::after {
 }
 .date-time{
     
+   
     
     position: relative;
     top:35px;   
@@ -245,7 +246,7 @@ nav ul li a{
  position: absolute;
  top:50%;
  left:40%;
- transform: translate(-20%,-50%);
+ transform: translate(-33%,-50%);
  width: 100%;
 
 
@@ -254,7 +255,7 @@ nav ul li a{
 
 #user-input{
  height: 40px;
- width: 50%; 
+ width: 70%; 
  background-color: #3c3c3c;
  border:1px solid #ff6117;
  border-radius: 5px;
@@ -463,14 +464,14 @@ and (min-width: 768px) {
 and (min-width: 992px) {  
     #input-fields{          
         transform: translate(-15%,-50%);           
-               
-       }
-       #input-fields{         
         width: 50%;      
-                
        }
+      
        #user-input , #search-btn{
            height: 50px;
+       }
+       #user-input{
+           width: 50%;
        }
      #search-btn{
         
