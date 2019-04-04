@@ -1,4 +1,6 @@
-import  { userInterface }  from './uiScript.js';
+import  { UserInterface }  from './uiScript.js';
 import {Carousel} from './carousel.js';
-userInterface.init();
+import {DataLoader} from './dataLoader.js';
+UserInterface.init();
 Carousel.init();
+// DataLoader.load();

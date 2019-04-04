@@ -318,8 +318,10 @@ nav ul li a{
     margin:0;
 }
 .news-image img{
-    object-fit: cover;
+    object-fit: cover;    
     }
+
+    
 
 .news-overlay{
     background-color: #000;   
@@ -392,6 +394,38 @@ nav ul li a{
     background-color: #ff570a;
   }
 
+/* ==================================================== */
+
+/* ======================================
+                News Listing
+====================================== */
+
+.news-list{
+    width:80%;
+    text-align: center;
+    margin:50px auto;
+    
+}
+.category-heading{
+    text-transform: capitalize;
+    font-size:2.5rem;
+    letter-spacing: 2px;
+    font-weight: 500;    
+    color:#420039;
+}
+
+.category-heading::after{
+    content: '';
+    display:block;
+    background-color:#ff570a;
+    width: 60%;
+    height: 1px;
+    margin:5px auto;
+    /* position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%); */
+}
 
 
 /* ======================================
@@ -441,7 +475,7 @@ and (min-width: 768px) {
 
 
     nav ul li a{        
-      font-size: 20px;
+      font-size: 20px;      
       margin-bottom: 0;
 
               

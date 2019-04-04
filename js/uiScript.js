@@ -1,4 +1,4 @@
-export const userInterface = function () {
+export const UserInterface = function () {
 	const dateDiv = document.querySelector('.date-time');
 	const menuBtn = document.getElementById('menu-btn');
 	const menuPanel = document.querySelector('nav ul');
