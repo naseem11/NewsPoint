@@ -91,9 +91,25 @@ export const UserInterface = function () {
 		
 		searchInput.classList.toggle('search-input-active');
 	}
+	
+	function renderData(json){
+	  
+		let node=`
+									<div class="news" >
+										<figure class="news-image">
+											<img src="images/top.jpg" alt="">
+											</figure>
+											<div class="news-overlay">
+												<h2>top news</h2>
+												<div class="news-text ">News text goes here.........</div>
+											</div>
+										</div >
+		
+		`
 
+		
+	}
+	
 
-	return {
-		init
-	};
+	return {init};
 }();
