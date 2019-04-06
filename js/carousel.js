@@ -1,10 +1,10 @@
 export const Carousel=function(){
     
     let slideIndex=1;
-    let flag=false;
-    const slides=document.querySelectorAll('.news');
-    const nextPreviousLinks=document.querySelectorAll('.carousel-container a');
+    let flag=false;      
     const navigationDots=document.querySelectorAll('.dot');
+    const nextPreviousLinks=document.querySelectorAll('.carousel-container a');
+
     function init(){
         
         _initialize();
@@ -51,7 +51,9 @@ export const Carousel=function(){
         }
     }
     
-    function _showSlide(n=1){                 
+    function _showSlide(n=1){  
+        
+        const slides=document.querySelectorAll('.news');             
         
         if (n > slides.length || slideIndex>3) {
             
@@ -73,7 +75,7 @@ export const Carousel=function(){
         
         if(!flag){
             slideIndex++;
-            setTimeout(_showSlide,2000);
+            setTimeout(_showSlide,5000);
         }
         
         

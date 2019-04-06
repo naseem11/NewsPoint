@@ -30,6 +30,7 @@ Black :       #000
       margin:0 auto;
       
   } */
+  a{text-decoration: none;}
   
   .center {
     position: relative;
@@ -266,24 +267,27 @@ Black :       #000
   }
   
   .news-image img {
-    object-fit: cover;
+    object-fit:cover;
+    object-position:top;
   }
   
   .news-overlay {
-    background-color: #000;
+    background-color: rgba(0, 0, 0,.8);
     position: absolute;
     top: 0;
-    left: 0;
-    opacity: .5;
+    left: 0;   
+    text-align: center;
   }
   
-  .news-overlay h2 {
+  .news-overlay h2{
     margin-top: 0;
     text-transform: capitalize;
-    color: #fff;
-    text-align: center;
+    color: #ff6117;  
+    letter-spacing: 2px;
+    font-size:1.5em;
     padding-top: 20px;
   }
+  
   
   .news-text {
     position: absolute;
@@ -292,7 +296,32 @@ Black :       #000
     transform: translate(-50%,-50%);
     color: #fff;
   }
+  .news-text h3 {
+    
+    text-transform: capitalize;
+    color: #fff;
   
+    letter-spacing: 1px;
+    font-size: 1.3em;
+   
+  }
+  .news-text p{
+
+    display:none;
+  }
+  .article-link{
+
+    display: inline-block;
+    padding: 5px;
+    background-color: #fff;
+    color: #000; 
+    border-radius: 5px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 12px;
+    
+   
+  }
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -424,6 +453,7 @@ Black :       #000
       height: 300px;
     }
   
+
   
      /* News Listing */
     .category-heading {
@@ -434,7 +464,39 @@ Black :       #000
   /* Large devices (desktops, 992px and up) */
   @media only screen 
   and (min-width: 992px) {
+    /* Headlines  */
+    .news-overlay h2{
+      
+        
+      letter-spacing: 3px;
+      font-size:2.2em;
+      padding-top: 20px;
+    }   
+    
+   
+    .news-text h3 {
+      
+      text-transform: capitalize;
+      color: #fff;    
+      letter-spacing: 1px;
+      font-size: 2em;
      
+    }
+    .news-text p{
+  
+      display:none;
+    }
+    .article-link{
+
+      
+      padding: 8px;      
+      font-size: 18px;
+      
+     
+      
+    }
+
+/* Search Panel */
     #input-fields{          
         transform: translate(-15%,-50%);
         width: 50%;
@@ -459,7 +521,7 @@ Black :       #000
     
       
     .carousel-container {
-      height: 400px;
+      height: 500px;
     }
   }
   
