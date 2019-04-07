@@ -47,10 +47,10 @@ export const UserInterface = function () {
 			4: "Thursday",
 			5: "Friday",
 			6: "Saturday",
-			7: "Sunday"
+			0: "Sunday"
 
 		}
-		let today = new Date();
+		let today = new Date();		
 		const date = `${day[today.getDay()]} , ${month[today.getMonth()]} 
                     ${today.getDate()}, ${today.getFullYear()}`;
 		element.textContent = date;
