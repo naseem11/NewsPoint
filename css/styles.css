@@ -143,6 +143,7 @@ Black :       #000
     padding: 8px;
     margin-bottom: 5px;
     border-radius: 10px;
+    
   }
   
   .link-active {
@@ -293,7 +294,7 @@ Black :       #000
     text-transform: capitalize;
     color: #ff6117;  
     letter-spacing: 2px;
-    font-size:20px;
+    font-size:16px;
     padding-top: 10px;
   }
   
@@ -304,13 +305,14 @@ Black :       #000
     left: 50%;
     transform: translate(-50%,-50%);
     color: #fff;
+    
   }
   .news-text h3 {
     
     text-transform: capitalize;
     color: #fff;  
     letter-spacing: 1px;
-    font-size: 18px;
+    font-size: 13px;    
     height: 40%;
    
   }
@@ -449,6 +451,14 @@ Black :       #000
   .card-right h4 , .card-right p{
 
     margin:10px 10px;
+  }
+  .card-right p{
+    line-height: 1.5;
+    
+  }
+  .card-right h4{
+    font-size: 18px;
+    letter-spacing: 1px;
   }
   .card-right a{
     color:#ff6117;

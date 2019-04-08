@@ -27,7 +27,7 @@ export const DataLoader=function(){
    function _setCategory(){
        let href=location.href;
        let category=href.substring((href.lastIndexOf('/')+1), href.lastIndexOf('.'));
-       return  category==='index'? 'general' : category ;
+       return  category==='index'? 'general' : category || 'general' ;
             
    }
     
@@ -38,12 +38,12 @@ export const DataLoader=function(){
 
         for(let i=0;i<3;i++){
             let title=(json.articles[i].title).slice(0,(json.articles[i].title).lastIndexOf('-'));          
-            let content=((json.articles[i].content)||(json.articles[i].description)).substr(0,261);
+            let content=((json.articles[i].content)||(json.articles[i].description)||'').substr(0,261);
             const neswDiv=document.createElement('div');
             neswDiv.classList.add('news');
             neswDiv.innerHTML=`
             <figure class="news-image">
-            <img src="${json.articles[i].urlToImage}" alt="">
+            <img src="${(json.articles[i].urlToImage)}"  alt="">
             </figure>
          <div class="news-overlay">
             <h2>Headlines</h2>
@@ -64,7 +64,7 @@ export const DataLoader=function(){
         const newsCardsContainer=document.querySelector('.news-cards');
         for(let i=3;i<json.articles.length;i++){
             let title=(json.articles[i].title).slice(0,(json.articles[i].title).lastIndexOf('-'));
-            let content=(json.articles[i].content).substr(0,261);
+            let content=((json.articles[i].content)||(json.articles[i].description)||'').substr(0,261);
             const cardDiv=document.createElement('div');
             cardDiv.classList.add('card');
             cardDiv.innerHTML=`
