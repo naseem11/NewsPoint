@@ -120,7 +120,7 @@ Black :       #000
     opacity: .9;
     list-style: none;
     height: calc(100% - 80px);
-    transition: all .5s ease-in;
+    transition: all .3s ease-in;
   }
   
   .appear {
@@ -149,6 +149,13 @@ Black :       #000
   .link-active {
     background-color: #fff;
     color: #850e75;
+  }
+
+  i.link-active{
+
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
   }
   
   .menu-bar {
@@ -246,6 +253,7 @@ Black :       #000
   .search-input-active {
     top: 0;
   }
+
   
   /* ========================================= */
   
@@ -312,8 +320,8 @@ Black :       #000
     text-transform: capitalize;
     color: #fff;  
     letter-spacing: 1px;
-    font-size: 13px;    
-    height: 40%;
+    font-size: 15px;    
+   
    
   }
   .news-text p{
@@ -399,6 +407,7 @@ Black :       #000
     letter-spacing: 2px;
     font-weight: 500;
     color: #420039;
+    margin-top: 2em;;
   }
   
   .category-heading::after {
@@ -407,7 +416,7 @@ Black :       #000
     background-color: #ff570a;
     width: 60%;
     height: 1px;
-    margin: 5px auto;
+    margin: 10px auto;
   }
 
    .news-cards { 
@@ -432,6 +441,9 @@ Black :       #000
   .card-left{
    
     width: 90%; 
+    background-image: url('../images/no-image.png');
+    background-size: cover;
+    background-position: center;
     height: 200px;   
 
   }
@@ -460,8 +472,10 @@ Black :       #000
     font-size: 18px;
     letter-spacing: 1px;
   }
-  .card-right a{
+  .card-right  p a{
+    
     color:#ff6117;
+    font-size: 21px;
     
   } 
   
@@ -483,7 +497,29 @@ Black :       #000
   /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
   @media only screen 
   and (min-width: 768px) {
-    
+    .news-overlay h2{
+      
+      font-size:1.5em;
+     
+    }    
+   
+    .news-text h3 {     
+     
+      font-size: 1.3em;          
+   
+}
+
+.card-left img{
+
+  
+  object-position: top;
+}
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media only screen 
+  and (min-width: 992px) {
+
     header {
       display: block;
     }
@@ -532,11 +568,6 @@ Black :       #000
     .category-heading {
       font-size: 2.5rem;
     }
-}
-  
-  /* Large devices (desktops, 992px and up) */
-  @media only screen 
-  and (min-width: 992px) {
     /* Headlines  */
     .news-overlay h2{
       
@@ -555,14 +586,7 @@ Black :       #000
       font-size: 2em;
      
     }
-    .news-text p{
-  
-      display:block;
-      font-size:20px;
-      line-height: 1.5;
-      letter-spacing:1px;
-      margin-bottom: 50px;
-    }
+    
     .article-link{
 
       
@@ -645,6 +669,15 @@ Black :       #000
       
     .carousel-container {
       height: 500px;
+    }
+
+    .news-text p{
+  
+      display:block;
+      font-size:20px;
+      line-height: 1.5;
+      letter-spacing:1px;
+      margin-bottom: 50px;
     }
   }
   

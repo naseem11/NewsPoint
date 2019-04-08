@@ -6,6 +6,7 @@ export const UserInterface = function () {
 	const navSearchIcon=document.querySelector('.fa-search');
 	const searchInput=document.querySelector('.search-input');
 	const searchCloseBtn=document.getElementById('search-close-btn');
+	const searchBtn=document.getElementById('search-btn');
 	
 
 	
@@ -65,7 +66,9 @@ export const UserInterface = function () {
 		menuBtn.addEventListener('click', _makeMenuPanelAppear);
 		navSearchIcon.addEventListener('click',_makeSearchAppearOrDisappear	);
 		searchCloseBtn.addEventListener('click',_makeSearchAppearOrDisappear);
-
+		// searchBtn.addEventListener('click',()=>{
+		// 	location.href='searchresults.html';
+		// });
 		if (window.screen.width < 768) {
 
 			menuLinks.forEach(_delayLoadingPage)

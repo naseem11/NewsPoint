@@ -9,6 +9,9 @@ export const DataLoader=function(){
 
     function load(){
          
+        // const urlParams = new URLSearchParams(window.location.search);
+        // const query = urlParams.get('search');
+       
        
         fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${_setCategory()}&apiKey=${apiKey}`)
         .then(response=>{
