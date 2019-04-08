@@ -3,9 +3,14 @@ export const DataLoader=function(){
     
     
     const apiKey='9f3a40a50d454978844ef44d9f323b71';
-    let country='ie';
+    const country='ie';
+    
+    
+
     function load(){
-        fetch(`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${apiKey}`)
+         
+       
+        fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${_setCategory()}&apiKey=${apiKey}`)
         .then(response=>{
             
             return response.json();
@@ -19,14 +24,21 @@ export const DataLoader=function(){
         .catch(error=>console.log(error.message));
     }
 
-
+   function _setCategory(){
+       let href=location.href;
+       let category=href.substring((href.lastIndexOf('/')+1), href.lastIndexOf('.'));
+       return  category==='index'? 'general' : category ;
+            
+   }
     
     function _renderData(json){
         console.log(json);
+
         const carouselContainer=document.querySelector('.carousel-container');
+
         for(let i=0;i<3;i++){
-            let title=(json.articles[i].title).slice(0,(json.articles[i].title).lastIndexOf('-'));
-            let content=(json.articles[i].content).substr(0,261);
+            let title=(json.articles[i].title).slice(0,(json.articles[i].title).lastIndexOf('-'));          
+            let content=((json.articles[i].content)||(json.articles[i].description)).substr(0,261);
             const neswDiv=document.createElement('div');
             neswDiv.classList.add('news');
             neswDiv.innerHTML=`
@@ -45,12 +57,35 @@ export const DataLoader=function(){
             `;
             carouselContainer.childNodes[0].before(neswDiv);
         }
-        
+
+                
         Carousel.init();
+
+        const newsCardsContainer=document.querySelector('.news-cards');
+        for(let i=3;i<json.articles.length;i++){
+            let title=(json.articles[i].title).slice(0,(json.articles[i].title).lastIndexOf('-'));
+            let content=(json.articles[i].content).substr(0,261);
+            const cardDiv=document.createElement('div');
+            cardDiv.classList.add('card');
+            cardDiv.innerHTML=`
+            <figure class="card-left">
+                <img src="${json.articles[i].urlToImage}" alt="">
+             </figure>
+            <div class="card-right">
+                <h4>${title}</h4>
+                <p>${content}
+                <a href="${json.articles[i].url}">read more...</a></p>
+                
+            </div>
+            
+            `;
+
+
+            newsCardsContainer.appendChild(cardDiv);
         
-        
+        }
         
         
     }
-    return {load}
+    return {load};
 }();
