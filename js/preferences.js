@@ -1,7 +1,7 @@
-import {UserInterface} from './uiScript.js';
-UserInterface.init();
+import { UserInterface } from './uiScript.js';
+ 
 export const Preferences=function(){
-
+    
     let preferences;
     let changesSaved = false;
     let changesMade = false;
@@ -13,7 +13,7 @@ export const Preferences=function(){
     const resetBtn=document.getElementById('reset');
 
     function init(){
-
+        UserInterface.init(); 
         _addEventListeners();
     }
 

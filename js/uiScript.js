@@ -2,11 +2,7 @@ export const UserInterface = function () {
 	const dateDiv = document.querySelector('.date-time');
 	const menuBtn = document.getElementById('menu-btn');
 	const menuPanel = document.querySelector('nav ul');
-	const menuLinks = document.querySelectorAll('nav ul li a');
-	const navSearchIcon=document.querySelector('.fa-search');
-	const searchInput=document.querySelector('.search-input');
-	const searchCloseBtn=document.getElementById('search-close-btn');
-	const searchBtn=document.getElementById('search-btn');
+	const menuLinks = document.querySelectorAll('nav ul li a');	
 	const backBtn=document.getElementById('back-btn');
 	const forwardBtn=document.getElementById('forward-btn');
 
@@ -64,8 +60,7 @@ export const UserInterface = function () {
 	function _addEventListeners() {
 
 		menuBtn.addEventListener('click', _makeMenuPanelAppear);
-		navSearchIcon.addEventListener('click',_makeSearchAppearOrDisappear	);
-		searchCloseBtn.addEventListener('click',_makeSearchAppearOrDisappear);
+		
 		backBtn.addEventListener('click',()=>{
 
 			history.back();
@@ -74,9 +69,7 @@ export const UserInterface = function () {
 
 			history.forward();
 		});
-		// searchBtn.addEventListener('click',()=>{
-		// 	location.href='searchresults.html';
-		// });
+		
 		if (window.screen.width < 768) {
 
 			menuLinks.forEach(_delayLoadingPage)
@@ -102,10 +95,7 @@ export const UserInterface = function () {
 		menuPanel.classList.toggle('appear');
 	}
 
-	function _makeSearchAppearOrDisappear(){
-		
-		searchInput.classList.toggle('search-input-active');
-	}
+	
 	
 	
 	

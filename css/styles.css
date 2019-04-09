@@ -190,70 +190,8 @@ Black :       #000
     text-shadow: 0 0 5px #000;
   }
   
-  /* Search button and input field */
-  .search {
-    font-size: 20px;
-  }
   
-  .search-input {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 15;
-    background-color: #000;
-   
-    transition: all .3s ease-in;
-  }
-  
-  #search-close-btn {
-    color: #fff;
-    font-size: 40px;
-    display: block;
-    text-align: right;
-    padding-right: 30px;
-    margin-top: 15px;
-    cursor: pointer;
-    font-weight: 700;
-  }
-  
-  #input-fields {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-33%,-50%);
-    width: 100%;
-  }
-  
-  #user-input {
-    height: 40px;
-    width: 70%;
-    background-color: #3c3c3c;
-    border: 1px solid #ff6117;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #ff6117;
-    color: #fff;
-    font-size: 20px;
-  }
-  
-  #user-input:focus ,#search-btn:focus {
-    outline: none;
-  }
-  
-  #search-btn {
-    height: 40px;
-    width: 15%;
-    border: 0;
-    font-size: 20px;
-    color: #ff6117;
-    background-color: #fff;
-    border-radius: 5px;
-  }
-  
-  .search-input-active {
-    top: 0;
-  }
+ 
   /* Back and forward btn */
   #back-btn,#forward-btn{
 
@@ -674,23 +612,7 @@ Black :       #000
       
     }
 
-/* Search Panel */
-    #input-fields{          
-        transform: translate(-15%,-50%);
-        width: 50%;
-    }
-  
-    #user-input , #search-btn {
-      height: 50px;
-    }
-  
-    #user-input {
-      width: 50%;
-    }
-  
-    #search-btn {
-      width: 10%;
-    }
+
   
   /* News Listing */
 
