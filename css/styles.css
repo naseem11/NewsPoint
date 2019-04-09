@@ -24,6 +24,7 @@ Black :       #000
   
   body {
     margin: 0;
+    
   }
   /* main{
       width:80%;
@@ -43,7 +44,7 @@ Black :       #000
   }
   
   /* ===================================== */
-  
+   
   /* ======================================
                  Header
   ====================================== */
@@ -253,7 +254,30 @@ Black :       #000
   .search-input-active {
     top: 0;
   }
+  /* Back and forward btn */
+  #back-btn,#forward-btn{
 
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index:50;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+  }
+  #back-btn{
+
+    top:85px;
+    left:3%;
+  }
+
+  #forward-btn{
+    top:85px;
+    right:3%;
+
+  }
   
   /* ========================================= */
   
@@ -478,7 +502,60 @@ Black :       #000
     font-size: 21px;
     
   } 
-  
+  /* ======================================
+              Preferences
+  ====================================== */
+
+  #preferences{
+
+    width: 50%;
+    margin:50px auto;
+    display:flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+  }
+  #preferences h3{
+    text-align: center;
+  }
+  .options{
+
+    width: 50%;
+    
+  }
+  .options h4{
+    width: 50%;
+    margin:5px auto;
+    font-size: 20px;
+    color: #fff;
+    background-color: #c2c2c2;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  select{
+
+    margin-bottom: 80px;
+    width: 40%;
+    height: 40px;
+    padding: 10px;
+    font-size:16px;
+    
+  }
+  #user-preference-btn{
+
+    width: 30%;
+    margin:20px auto;
+    text-align: center;
+  }
+
+  #user-preference-btn button{
+    display: inline-block;
+    width:100px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+ 
   /* ======================================
               Media Queries
   ====================================== */
@@ -621,8 +698,10 @@ Black :       #000
   .card{
     width: 50%;  
     flex-direction: row-reverse;
-    border:none;
+    border:none;   
+    /* position: relative; */
     border-bottom: 1px solid #c2c2c2;
+    /* padding-bottom: 25px; */
     
     
    
@@ -660,7 +739,24 @@ Black :       #000
     font-size: 18px;
     
   }
+  /* .source{
+
+    width: 80%;    
+    height: 20px;
+    position: absolute;
+    left:0;
+    bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+
+    
+    
+  } */
+  /* .source-info{
  
+  color:lightslategray;
+  }
+  */
 }
   /* Extra large devices (large desktops, 1200px and up) */
   @media only screen 
@@ -679,6 +775,8 @@ Black :       #000
       letter-spacing:1px;
       margin-bottom: 50px;
     }
+    
+    
   }
   
   

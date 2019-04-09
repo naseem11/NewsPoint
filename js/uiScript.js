@@ -7,9 +7,9 @@ export const UserInterface = function () {
 	const searchInput=document.querySelector('.search-input');
 	const searchCloseBtn=document.getElementById('search-close-btn');
 	const searchBtn=document.getElementById('search-btn');
-	
+	const backBtn=document.getElementById('back-btn');
+	const forwardBtn=document.getElementById('forward-btn');
 
-	
 	
 	
 
@@ -66,6 +66,14 @@ export const UserInterface = function () {
 		menuBtn.addEventListener('click', _makeMenuPanelAppear);
 		navSearchIcon.addEventListener('click',_makeSearchAppearOrDisappear	);
 		searchCloseBtn.addEventListener('click',_makeSearchAppearOrDisappear);
+		backBtn.addEventListener('click',()=>{
+
+			history.back();
+		});
+		forwardBtn.addEventListener('click',()=>{
+
+			history.forward();
+		});
 		// searchBtn.addEventListener('click',()=>{
 		// 	location.href='searchresults.html';
 		// });

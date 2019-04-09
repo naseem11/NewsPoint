@@ -1,4 +1,5 @@
 import {Carousel} from './carousel.js';
+import {Preferences} from './preferences.js';
 export const DataLoader=function(){
     
     
@@ -81,14 +82,24 @@ export const DataLoader=function(){
                 
             </div>
             
+            
             `;
 
 
             newsCardsContainer.appendChild(cardDiv);
         
         }
+        Preferences.setUserPreferences();
         
         
     }
     return {load};
 }();
+
+
+// <div class="source">
+            // <span class="source-info"> Author</span>
+			// 										<span class="source-info">Published on : ${json.articles[i].publishedAt}</span>
+			// 										<span class="source-info">source</span>
+														
+			// 										</div>

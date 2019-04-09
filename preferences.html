@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta http-equiv="X-UA-Compatible" content="ie=edge">
+					<title>NewsPoint</title>
+					<!-- Font Awesome -->
+					<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+						<!-- User CSS -->
+						<link rel="stylesheet" href="css/styles.css">
+						</head>
+						<body>
+							<header>
+								<h1 class="center">news point</h1>
+								<span class="date-time "></span>
+							</header>
+							<nav>
+								<div id="menu-btn">
+									<span class="menu-bar"></span>
+									<span class="menu-bar"></span>
+									<span class="menu-bar"></span>
+								</div>
+								<a id="home-link" href="index.html">
+									<div class="logo">NewsPoint 
+									
+								</div>
+								</a>
+							<ul>
+								<li>
+									<a  href="index.html">Home</a>
+								</li>
+								<li>
+									<a href="sports.html">Sports</a>
+								</li>
+								<li>
+									<a href="technology.html">Technology</a>
+								</li>
+								<li>
+									<a href="entertainment.html">Entertainment</a>
+								</li>
+								<li>
+									<a href="business.html">Business</a>
+								</li>
+								<li>
+									<a href="science.html">Science</a>
+								</li>
+								<li>
+									<a href="health.html">Health</a>
+
+								</li>
+								<li>
+										<a  class="link-active" href="#">Preferences</a>
+								</li>
+							</ul>
+							<div class="search">
+								<i class="fas fa-search"></i>
+								<div class="search-input">
+									<span id="search-close-btn">&times</span>
+									<div id="input-fields">
+										<form method="GET" action="searchresults.html"  >
+											<input type="text" name="search" id="user-input" placeholder="Your search.....">
+												<button type="submit" id="search-btn">
+													<i class="fas fa-search"></i>
+												</button>
+											</form>
+									</div>
+									</div>
+								</div>
+							</nav>
+							
+							<main>
+
+								<span id="back-btn">
+										<i class="fas fa-arrow-left"></i>
+								</span>
+								<span id="forward-btn">
+										<i class="fas fa-arrow-right"></i>
+                                </span>
+                                <h3 class="category-heading" style="text-align:center;">Preferences</h3>
+                                <section id="preferences">
+                                       
+                                    <div class="options ">
+                                        <h4>Theme</h4>
+                                        <select name="theme" id="theme" onchange="setTheme();">
+                                                <option value="Default" selected>Default</option>
+                                                <option value="Red">Red</option>
+                                                
+                                         </select>
+                                    </div>
+                                    <div class="options">
+                                        <h4>Navbar Links Font size </h4>
+                                        <select name="links" id="linksfontsize" onchange="setLinksFontSize()" >
+                                                <option value="16px">Small</option>
+                                                <option value="20px" selected>Medium</option>
+                                                <option value="24px">Large</option>
+                                            </select>
+                                    </div>
+                                    <div class="options">
+                                        <h4>Paragraph Font Size</h4>
+                                        <select name="para" id="parafontsize"  onchange="setParagraphFontSize()">
+                                                <option value="16px">Small</option>
+                                                <option value="20px">Medium</option>
+                                                <option value="24px">Large</option>
+                                            </select>
+                                    </div>
+                                    <div class="options">
+                                        <h4>News Headings Font size</h4>
+                                        <select name="head" id="newsheadingfontsize" onchange="setHeadingSize()" >
+                                                <option value="16px">Small</option>
+                                                <option value="20px">Medium</option>
+                                                <option value="50px">Large</option>
+                                         </select>
+                                    </div>
+                                </section>
+                                <div id="user-preference-btn">
+                                        <button id="reset" onclick="reset()">Reset</button>
+                                        <button id="save" onclick="savePreferences()">Save</button>
+                                </div>
+                                <h3 id="message"></h3>
+                            </main>
+                            <script type="module" src="js/userPreferences.js"></script>
+                        </body>
+</html>
