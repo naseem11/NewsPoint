@@ -64,12 +64,13 @@
 								<span id="forward-btn">
 										<i class="fas fa-arrow-right"></i>
                                 </span>
-                                <h3 class="category-heading" style="text-align:center;">Preferences</h3>
+								<h3 class="category-heading" style="text-align:center;">Preferences</h3>
+								<h3 id="message"></h3>
                                 <section id="preferences">
                                        
                                     <div class="options ">
                                         <h4>Theme</h4>
-                                        <select name="theme" id="theme" onchange="setTheme();">
+                                        <select name="theme" id="theme">
                                                 <option value="Default" selected>Default</option>
                                                 <option value="Red">Red</option>
                                                 
@@ -77,34 +78,34 @@
                                     </div>
                                     <div class="options">
                                         <h4>Navbar Links Font size </h4>
-                                        <select name="links" id="linksfontsize" onchange="setLinksFontSize()" >
-                                                <option value="16px">Small</option>
+                                        <select name="links" id="linksfontsize" >
+                                                <option  value="16px">Small</option>
                                                 <option value="20px" selected>Medium</option>
                                                 <option value="24px">Large</option>
                                             </select>
                                     </div>
                                     <div class="options">
                                         <h4>Paragraph Font Size</h4>
-                                        <select name="para" id="parafontsize"  onchange="setParagraphFontSize()">
+                                        <select name="para" id="parafontsize"  >
                                                 <option value="16px">Small</option>
-                                                <option value="20px">Medium</option>
-                                                <option value="24px">Large</option>
+                                                <option value="18px" selected>Medium</option>
+                                                <option value="22px">Large</option>
                                             </select>
                                     </div>
                                     <div class="options">
                                         <h4>News Headings Font size</h4>
-                                        <select name="head" id="newsheadingfontsize" onchange="setHeadingSize()" >
+                                        <select name="head" id="newsheadingfontsize"  >
                                                 <option value="16px">Small</option>
-                                                <option value="20px">Medium</option>
-                                                <option value="50px">Large</option>
+                                                <option value="22px" selected>Medium</option>
+                                                <option value="24px">Large</option>
                                          </select>
                                     </div>
                                 </section>
                                 <div id="user-preference-btn">
-                                        <button id="reset" onclick="reset()">Reset</button>
-                                        <button id="save" onclick="savePreferences()">Save</button>
+                                        <button id="reset">Reset</button>
+                                        <button id="save" >Save</button>
                                 </div>
-                                <h3 id="message"></h3>
+                               
                             </main>
                             <script type="module" src="js/userPreferences.js"></script>
                         </body>

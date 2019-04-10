@@ -30,6 +30,10 @@ export const DataLoader=function(){
    function _setCategory(){
        let href=location.href;
        let category=href.substring((href.lastIndexOf('/')+1), href.lastIndexOf('.'));
+       if(href.lastIndexOf('/')> href.lastIndexOf('.')){
+           return 'general';
+          }       
+
        return  category==='index'? 'general' : category || 'general' ;
             
    }
