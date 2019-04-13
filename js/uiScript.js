@@ -5,7 +5,6 @@ export const UserInterface = function () {
 	const menuLinks = document.querySelectorAll('nav ul li a');	
 	const backBtn=document.getElementById('back-btn');
 	const forwardBtn=document.getElementById('forward-btn');
-
 	
 	
 
@@ -16,9 +15,10 @@ export const UserInterface = function () {
 
 
 	function _initialize() {
-
+	
 		_setDate(dateDiv);
 		_addEventListeners();
+	
 
 	}
 	// _setDate function Start

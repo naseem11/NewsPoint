@@ -24,6 +24,7 @@ Black :       #000
   
   body {
     margin: 0;
+    /* font-family: 'Lato', sans-serif; */
     
   }
   ::-webkit-scrollbar{
@@ -49,6 +50,7 @@ Black :       #000
   /* ======================================
                  Header
   ====================================== */
+
   header {
     min-width: 100%;
     height: 150px;
@@ -207,6 +209,7 @@ Black :       #000
     border-radius: 50%;
     text-align: center;
     line-height: 30px;
+    transition: all .5s;
   }
   #back-btn{
 
@@ -219,9 +222,13 @@ Black :       #000
     right:3%;
 
   }
+  #back-btn:hover,#forward-btn:hover{
+    background-color: #ff570a;
+  }
   
   /* ========================================= */
   
+ 
   
   /* ===================================== */
   
@@ -371,23 +378,24 @@ Black :       #000
     text-align: center;
     margin: 50px auto;
   }
+
   .svg-container{
     position: relative;    
-    width:50%;
+    width:100%;
     margin: 0 auto 50px auto;
     
   }
 
 svg{
   position: relative;
-  width:105px;
-  height: 125px;
-  left:-40px;
+  width:70px;
+  height: 80px;
+  left:-60px;
 }
 
 rect{
-  width:100px;
-  height: 120px;
+  width:80px;
+  height: 90px;
   fill:#ff570a;
 }
   
@@ -398,7 +406,7 @@ rect{
     letter-spacing: 4px;
     position: absolute;
     top:40%;
-    left:43%;
+    left:32%;
     font-weight: 500;
     color: #420039;
     margin:0;
@@ -486,7 +494,7 @@ rect{
   ====================================== */
  
 #video-wrapper{
-  width: 60%;
+  width: 100%;
   margin:50px auto;
   position: relative;
   padding-bottom: 56.25%;
@@ -502,7 +510,7 @@ rect{
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
 
   /* ======================================
@@ -566,6 +574,8 @@ rect{
     border-radius: 10px;
     border:none;
     box-shadow: 0 0 10px #3c3c3c;
+    outline:none;
+    transition:all .5s;
   }
 
   #user-preference-btn button:hover{
@@ -612,6 +622,11 @@ rect{
 
   
   object-position: top;
+}
+
+.category-heading{
+
+  left:41.5%;
 }
   }
   
@@ -672,6 +687,32 @@ rect{
 
   
      /* News Listing */
+     .svg-container{
+      
+      width:50%;
+     
+      
+    }
+  
+  svg{
+    width: 100px;
+    height: 125px;
+    left:-40px;
+  }
+  
+  rect{
+    width: 100px;
+    height: 120px;;
+  }
+  
+    
+    
+    .category-heading {    
+              
+      top:40%;
+      left:43%;      
+    }  
+   
     .category-heading {
       font-size: 2.5rem;
     }
@@ -769,6 +810,17 @@ rect{
     margin-right:20px;
   }
  
+  /* Live News */
+  #video-wrapper{
+    width: 52%;
+   
+  }
+  
+  #video-wrapper iframe{
+  
+    
+    height: 50%;
+  }
   
   /* .source{
 
@@ -806,6 +858,26 @@ rect{
       letter-spacing:1px;
       margin-bottom: 50px;
     }
+
+    /* category heading and svg */
+   
+    
+  
+  svg{
+   
+    height: 110px;
+    left:-80px;
+  }
+  
+  rect{
+    height: 110px;;
+  }
+    
+    
+    .category-heading {        
+      left:40.5%;     
+    }
+  
     
     
   }
