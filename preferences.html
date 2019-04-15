@@ -8,7 +8,7 @@
 					<!-- Font Awesome -->
 					<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 						<!-- User CSS -->
-						<link rel="stylesheet" href="css/styles.css">
+						<link rel="stylesheet"  class="theme"  href="css/styles.css">
 						</head>
 						<body>
 							<header>
@@ -82,8 +82,9 @@
 										    <div class="options ">
 													<h4>Theme</h4>
 													<select name="theme" id="theme">
-															<option value="Default" selected>Default</option>
+															<option value="Default"  >Default</option>
 															<option value="Red">Red</option>
+															<option value="Yellow">Yellow</option>
 															
 													 </select>
 												</div>
@@ -91,25 +92,31 @@
 													<h4>Navbar Links Font size </h4>
 													<select name="links" id="linksfontsize" >
 															<option  value="16px">Small</option>
-															<option value="20px" selected>Medium</option>
+															<option value="20px"  >Medium</option>
 															<option value="24px">Large</option>
 														</select>
 												</div>
 												<div class="options">
 													<h4>Paragraph Font Size</h4>
-													<select name="para" id="parafontsize"  >
+													<label for="parafontsize" id="paralabel">18px</label>
+													<input type="range" name="para" id="parafontsize" min="16" max="22">
+													<!-- <select name="para" id="parafontsize"  >
 															<option value="16px">Small</option>
-															<option value="18px" selected>Medium</option>
+															<option value="18px"  >Medium</option>
 															<option value="22px">Large</option>
-														</select>
+														</select> -->
 												</div>
 												<div class="options">
 													<h4>News Headings Font size</h4>
 													<select name="head" id="newsheadingfontsize"  >
 															<option value="16px">Small</option>
-															<option value="22px" selected>Medium</option>
+															<option value="22px"  >Medium</option>
 															<option value="24px">Large</option>
 													 </select>
+												</div>
+												<div class="options">
+													<h4>Paragraphs Color</h4>
+													<input type="color" name="paracolor" id="paracolor">
 												</div>
 									   </div>
                                    

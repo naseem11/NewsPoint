@@ -368,6 +368,18 @@ Black :       #000
  
   
   /* ==================================================== */
+
+  /* User Name  Input */
+  #user-name-input{
+ 
+
+    width: 90%;
+    height: 200px;
+    
+    background-color: #000;
+    position: fixed;
+    z-index: 1200;
+  }
   
   /* ======================================
                   News Listing
@@ -544,7 +556,7 @@ rect{
     margin-bottom: 30px;
     padding: 10px;
   }
-  select{
+  select,#paracolor,#parafontsize{
 
     margin-bottom: 50px;
     width: 50%;
@@ -684,6 +696,15 @@ rect{
       height: 300px;
     }
   
+     /* User Name  Input */
+  #user-name-input{
+ 
+
+    width: 50%;
+    height: 300px;
+    
+  
+  }
 
   
      /* News Listing */
@@ -802,7 +823,7 @@ rect{
    }
     
    .options{  
-    width: 45%;          
+    width: 40%;          
          
   }
  .options:nth-child(odd){
