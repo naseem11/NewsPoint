@@ -186,6 +186,7 @@ function reset(){
     if(styleSheetsCount>1 ){            
             head.removeChild(head.lastChild);
                }
+     alert("Preferences have been  reset to default! ")          
     
 }
 

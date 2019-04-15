@@ -6,7 +6,6 @@ export const UserInterface = function () {
 	const backBtn=document.getElementById('back-btn');
 	const forwardBtn=document.getElementById('forward-btn');
 	
-	
 
 	function init() {
 
@@ -18,6 +17,7 @@ export const UserInterface = function () {
 	
 		_setDate(dateDiv);
 		_addEventListeners();
+		
 	
 
 	}
@@ -55,6 +55,9 @@ export const UserInterface = function () {
 	}
 	// End of _setDate function
 
+	
+	
+
 	//  _addEventListeners function start
 
 	function _addEventListeners() {
@@ -74,7 +77,7 @@ export const UserInterface = function () {
 
 			menuLinks.forEach(_delayLoadingPage)
 		}
-
+		
 
 	}
 
@@ -95,6 +98,7 @@ export const UserInterface = function () {
 		menuPanel.classList.toggle('appear');
 	}
 
+	
 	
 	
 	

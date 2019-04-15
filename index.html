@@ -14,6 +14,10 @@
 						</head>
 						<body>
 							<header>
+								<div id="welcome">
+									<span>Welcome ,  <span id="name"></span> </span><br>
+									<span >Your Location is <span id="location"></span> </span>
+								</div>
 								<h1 class="center">news point</h1>
 								<span class="date-time "></span>
 							</header>
@@ -55,6 +59,10 @@
 								<li>
 										<a href="livenews.html">Live News</a>
 								  </li>
+								  <li>
+									<a href="fun.html">Fun</a>
+							  </li>
+								  
 								<li>
 										<a href="preferences.html">Preferences</a>
 								</li>
@@ -72,7 +80,10 @@
 										<i class="fas fa-arrow-right"></i>
 								</span>
 								<section id="user-name-input" class="center">
-
+										<div class="center">
+											<input type="text" name="username" id="username" required placeholder="Please enter your name...">
+											<button class="button">Enter</button>
+										</div>
 								</section>
 								
 								<section class="carousel-container">
@@ -120,6 +131,7 @@
 											</section>
 										</main>
 										<script type="module" src="js/main.js"></script>
+										<script type="module" src="js/userNameAndLocation.js"></script>
 										
 									</body>
 								</html>
