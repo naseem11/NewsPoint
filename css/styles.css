@@ -94,10 +94,15 @@ header h1::after {
 
 #welcome {
   position: absolute;
+  width: 400px;
+  height: 70px;
+  background-color: #ff6117;
   color: #fff;
-  top: 20px;
-  left: 20px;
+  top: 10px;
+  left: 0;
   display: none;
+  clip-path: polygon(0% 0%, 100% 0, 90% 48%, 100% 100%, 0% 100%);
+
 }
 
 #welcome span {
