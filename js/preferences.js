@@ -80,9 +80,9 @@ export const Preferences=function(){
             style.rel = 'stylesheet';
             style.classList.add('theme');
             head.append(style);
-        }else if(value==='Yellow'){
+        }else if(value==='Green'){
             const style = document.createElement('link');
-            style.href = './css/yellowtheme.css';
+            style.href = './css/greentheme.css';
             style.type = 'text/css';
             style.rel = 'stylesheet';          
             style.classList.add('theme');
@@ -186,6 +186,12 @@ function reset(){
     if(styleSheetsCount>1 ){            
             head.removeChild(head.lastChild);
                }
+
+    theme.selectedIndex='0';
+    linksFont.selectedIndex='1';
+    headingFont.selectedIndex='1';
+    paraColor.value='';
+    paraFont.value='';           
      alert("Preferences have been  reset to default! ")          
     
 }
@@ -251,7 +257,68 @@ function setUserPreferences(){
     }
 }
 
-return{ setUserPreferences , init}
+
+function setControlsValue(){
+
+    if(localStorage.getItem("usersettings") !== null ){
+
+        const preferences=JSON.parse(localStorage.getItem('usersettings'));
+     
+        if(preferences.theme){
+
+            if(preferences.theme==='Default'){
+
+                theme.selectedIndex='0';
+            }else if(preferences.theme==='Red'){
+
+                theme.selectedIndex='1';
+                
+            }else{
+
+                theme.selectedIndex='2';
+            }
+        }
+            if(preferences.linksSize)
+            {
+            if(preferences.linksSize==='16px'){
+
+                linksFont.selectedIndex='0';
+            }else if(preferences.linksSize==='20px'){
+
+                linksFont.selectedIndex='1';
+            }else{
+                linksFont.selectedIndex='2';
+            }
+        }
+
+        if(preferences.headingSize){
+
+            if(preferences.headingSize==='16px'){
+
+                headingFont.selectedIndex='0';
+            }else if(preferences.headingSize==='22px'){
+
+                headingFont.selectedIndex='1';
+            }else{
+                headingFont.selectedIndex='2';
+            }
+        }
+
+        if(preferences.paracolor){
+
+            paraColor.value=preferences.paracolor;
+        }
+
+        if(preferences.paraSize){
+
+           paraFont.value=parseInt(preferences.paraSize);
+           paraLabel.textContent=preferences.paraSize;
+        }
+
+    }
+}
+
+return{ setUserPreferences , init, setControlsValue};
 }();
 
 

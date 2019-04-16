@@ -1,9 +1,9 @@
 header{
-    background-color: #8E0031;
+    background-color: #063235;
 
 }
 nav{
-    background-color: #000;
+    background-color: #4d8b88;
 }
 
 
@@ -34,7 +34,7 @@ nav{
   header {
   
     
-    background-color: #8E0031;
+    background-color: #063235;
    
   }
   
@@ -47,7 +47,7 @@ nav{
   
   header h1::after {
    
-    background-color: #ff6117;
+    background-color: #5cdb94;
    
   }
   
@@ -77,7 +77,7 @@ nav{
   
   nav {
  
-    background-color: #000;
+    background-color: #4d8b88;
     color: #fff;
    
  
@@ -85,7 +85,7 @@ nav{
   
   nav ul {
    
-    background-color: #000;
+    background-color: #4d8b88;
    
   }
   
@@ -125,7 +125,7 @@ nav{
   
  
   #back-btn:hover,#forward-btn:hover{
-    background-color: #ff570a;
+    background-color: #5cdb94;
   }
   
   
@@ -149,7 +149,7 @@ nav{
   
   .news-overlay h2{
  
-    color: #ff6117;  
+    color: #5cdb94;  
   
   }
   
@@ -178,7 +178,7 @@ nav{
    
   }
   .article-link:hover{
-    background-color: #ff570a;
+    background-color: #5cdb94;
     color:#fff;
   }
 
@@ -202,7 +202,7 @@ nav{
   }
   
   .active, .dot:hover {
-    background-color: #ff570a;
+    background-color: #5cdb94;
   }
  
   
@@ -218,7 +218,7 @@ nav{
   input#username{
   
     
-    border: 2px solid #ff570a;
+    border: 2px solid #5cdb94;
    
   }
  
@@ -231,14 +231,14 @@ nav{
 
 rect{
  
-  fill:#ff570a;
+  fill:#5cdb94;
 }
   
   
   .category-heading {
   
   
-    color: #000;
+    color: #4d8b88;
   }
 
   .category-heading::first-letter{
@@ -250,7 +250,7 @@ rect{
   
   .svg-container::after {
    
-    background-color: #ff570a;
+    background-color: #5cdb94;
    
   }
 
@@ -267,7 +267,7 @@ rect{
  
   .card-right  p a{
     
-    color:#ff6117;
+    color:#5cdb94;
     
     
   } 
@@ -297,7 +297,7 @@ rect{
     
   
     color: #fff;
-    background-color: #8E0031;
+    background-color: #063235;
    
   }
   
@@ -307,14 +307,14 @@ rect{
   .button{
   
     color: #fff;
-    background-color: #000;
+    background-color: #4d8b88;
    
    
    
   }
 
   .button:hover{
-    background-color: #ff570a;
+    background-color: #5cdb94;
   }
 
  

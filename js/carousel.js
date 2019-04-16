@@ -1,85 +1,88 @@
-export const Carousel=function(){
-    
-    let slideIndex=1;
-    let flag=false;      
-    const navigationDots=document.querySelectorAll('.dot');
-    const nextPreviousLinks=document.querySelectorAll('.carousel-container a');
+export const Carousel = function () {
 
-    function init(){
-        
+    let slideIndex = 1;
+    let flag = false;
+    const navigationDots = document.querySelectorAll('.dot');
+    const nextPreviousLinks = document.querySelectorAll('.carousel-container a');
+
+    function init() {
+
         _initialize();
     }
-    
-    function _initialize(){
+
+    function _initialize() {
         _showSlide(slideIndex);
         _addEventListeners();
-        
-        
+
+
     }
-    
-    function _addEventListeners(){
-        
-        nextPreviousLinks.forEach((el)=>{
-            el.addEventListener('click',_nextSlide);
+
+    function _addEventListeners() {
+
+        nextPreviousLinks.forEach((el) => {
+            el.addEventListener('click', _nextSlide);
         });
-        navigationDots.forEach((el)=>{
-            
-            el.addEventListener('click',_currentSlide)
+        navigationDots.forEach((el) => {
+
+            el.addEventListener('click', _currentSlide)
         });
     }
-    
-    function _currentSlide(event){
-        flag=true;
-        if(event.srcElement==navigationDots[0]){
-            
-            _showSlide(slideIndex=1);
-        }else if(event.srcElement==navigationDots[1]){
-            _showSlide(slideIndex=2);
-        }else{
-            
-            _showSlide(slideIndex=3);
+
+    function _currentSlide(event) {
+        flag = true;
+        if (event.srcElement == navigationDots[0]) {
+
+            _showSlide(slideIndex = 1);
+        } else if (event.srcElement == navigationDots[1]) {
+            _showSlide(slideIndex = 2);
+        } else {
+
+            _showSlide(slideIndex = 3);
         }
-        
+
     }
-    function _nextSlide(event){  
-        flag=true;
-        if(event.srcElement.classList.contains('prev')){            
-            _showSlide(slideIndex+=-1);            
-        }else{
-            _showSlide(slideIndex+=1);
-            
+
+    function _nextSlide(event) {
+        flag = true;
+        if (event.srcElement.classList.contains('prev')) {
+            _showSlide(slideIndex += -1);
+        } else {
+            _showSlide(slideIndex += 1);
+
         }
     }
-    
-    function _showSlide(n=1){  
-        
-        const slides=document.querySelectorAll('.news');             
-        
-        if (n > slides.length || slideIndex>3) {
-            
+
+    function _showSlide(n = 1) {
+
+        const slides = document.querySelectorAll('.news');
+
+        if (n > slides.length || slideIndex > 3) {
+
             slideIndex = 1;
-        } 
+        }
         if (n < 1) {
-            
+
             slideIndex = slides.length;
         }
         for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none"; 
+            slides[i].style.display = "none";
         }
-        
+
         for (let i = 0; i < navigationDots.length; i++) {
-            navigationDots[i].className =  navigationDots[i].className.replace(" active", "");
+            navigationDots[i].className = navigationDots[i].className.replace(" active", "");
         }
-        slides[slideIndex-1].style.display = "block"; 
-        navigationDots[slideIndex-1].className += " active";
-        
-        if(!flag){
+        slides[slideIndex - 1].style.display = "block";
+        navigationDots[slideIndex - 1].className += " active";
+
+        if (!flag) {
             slideIndex++;
-            setTimeout(_showSlide,5000);
+            setTimeout(_showSlide, 5000);
         }
-        
-        
+
+
     }
-    
-    return {init}
+
+    return {
+        init
+    }
 }();
