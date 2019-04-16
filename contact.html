@@ -28,10 +28,13 @@
             <span class="menu-bar"></span>
         </div>
         <a id="home-link" href="index.html">
-            <div class="logo">NewsPoint 
-                
-            </div>
-        </a>
+			<div class="logo">NP
+
+			</div>
+		</a>
+         <div id="sm-welcome">
+			 Welcome !<br> <span id="sm-name"></span>
+		 </div>
         
         <ul>
             <li>
@@ -90,16 +93,26 @@
             <div class="contact-container">
                 <div class="contact-form-container">
                     <h4>Your Details</h4>
+                    <form action="#" method="">
+                        <input type="text" name="firstname"  placeholder="First Name...">      
+                        <input type="text" name="lastname"  placeholder="Last Name..." >      
+                        <input type="email" name="email"  placeholder="Email..." >      
+                        <input type="text" name="phone"  placeholder="Phone...">     
+                        <textarea name="message"  placeholder="Message..." ></textarea> 
+                        <input type="submit" class="button" name="submit" value="Submit">   
+                     </form>
                 </div>
                 <div class="contact-map-container">
                    <h4>Find us Here</h4>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d595.2857339992644!2d-6.549143170746852!3d53.358596799126715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486771b46641d12d%3A0x363806abb6015fe6!2sIIS+Space!5e0!3m2!1sen!2sie!4v1555451131694!5m2!1sen!2sie" width="100%" height="425"   allowfullscreen></iframe>
                 </div>
             </div>
             
         </section>
     </main>
     <script type="module" src="js/main.js"></script>
-    
+    <script type="module" src="js/userNameAndLocation.js"></script>
+
     
 </body>
 </html>

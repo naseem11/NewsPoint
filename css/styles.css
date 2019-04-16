@@ -96,11 +96,13 @@ header h1::after {
   position: absolute;
   width: 400px;
   height: 70px;
-  background-color: #ff6117;
+  background-color: #d84d0d;
   color: #fff;
+ 
   top: 10px;
   left: 0;
   display: none;
+  padding-top:10px;
   clip-path: polygon(0% 0%, 100% 0, 90% 48%, 100% 100%, 0% 100%);
 
 }
@@ -109,7 +111,12 @@ header h1::after {
 
   font-weight: bold;
   letter-spacing: 1px;
-  text-shadow: 0 0 5px #000;
+  color:#fff;
+  text-shadow: 0 0 2px #000;
+  
+}
+#sm-welcome{
+  letter-spacing: 1px;
 }
 
 /* ===================================== */
@@ -127,9 +134,10 @@ nav {
   background-color: #420039;
   color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-left: 30px;
-  padding-right: 40px;
+  padding-right: 30px;
+  flex-wrap: nowrap;  
   align-items: center;
 
 }
@@ -213,7 +221,11 @@ i.link-active {
 .logo {
   font-size: 20px;
   letter-spacing: 2px;
+  padding: 5px;
   text-shadow: 0 0 5px #000;
+  border:2px solid #ff570a;
+ 
+  
 }
 
 
@@ -597,7 +609,56 @@ rect {
 .contact-form-container,
 .contact-map-container {
 
-  width: 50%;
+  width: 100%;
+  
+
+}
+.contact-form-container h4,
+  .contact-map-container h4{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color:#420239;
+
+  }
+.contact-map-container {
+
+ border-top: 1px solid #c2c2c2;
+  
+
+}
+
+
+form{
+  width: 100%;
+  padding: 10px;
+  margin:0 auto;
+  text-align: center;
+}
+input, textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border:none;
+  border-bottom: 1px solid #e8491d;
+}
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+input:focus , textarea:focus{
+  outline: none;
+}
+input, textarea, input::placeholder, textarea::placeholder {
+  font-size: 18px;
+}
+
+.contact-map-container iframe{
+ 
+  border:0;
+  margin-top:20px;
+  box-shadow: 0 0 10px #3c3c3c;
 
 }
 
@@ -693,6 +754,12 @@ select,
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media only screen and (min-width: 768px) {
+  #sm-welcome{
+    padding-right: 50px;
+    
+  }
+  
+  
   .news-overlay h2 {
 
     font-size: 1.5em;
@@ -729,6 +796,10 @@ select,
 
   #menu-btn,
   .logo {
+    display: none;
+  }
+
+  #sm-welcome{
     display: none;
   }
 
@@ -924,6 +995,31 @@ select,
 
     height: 50%;
   }
+
+
+  /* Contact */
+
+  .contact-form-container,
+  .contact-map-container {
+
+  width: 48%;
+  padding-left: 20px;
+
+}
+.contact-map-container{
+  border-left:1px solid #c2c2c2;
+  margin-left: 10px;
+  border-top: none;
+}
+.contact-form-container h4,
+  .contact-map-container h4{
+    font-size: 25px;
+    
+  }
+  .contact-map-container iframe{
+  margin-left:20px;        
+
+}
 
   /* .source{
 

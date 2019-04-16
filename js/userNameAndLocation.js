@@ -4,6 +4,7 @@ const userNameSection = document.getElementById('user-name-input');
 const welcomeDiv = document.getElementById('welcome');
 const nameSpan = document.getElementById('name');
 const locSpan = document.getElementById('location');
+const smNameSpan=document.getElementById('sm-name');
 
 
 // Check Local Storage for username
@@ -11,7 +12,11 @@ const locSpan = document.getElementById('location');
 
 setUsername();
 getLocation();
-enterBtn.addEventListener('click', saveUsername);
+if(enterBtn){
+    
+    enterBtn.addEventListener('click', saveUsername);
+}
+
 
 function saveUsername() {
 
@@ -31,10 +36,13 @@ function setUsername() {
 
         userNameSection.style.display = 'block';
     } else {
-
-        welcomeDiv.style.display = 'block';
-        nameSpan.textContent = (JSON.parse(localStorage.getItem('userName')).name).toUpperCase();
-
+        let name=(JSON.parse(localStorage.getItem('userName')).name).toUpperCase();
+        if(welcomeDiv && nameSpan){
+            welcomeDiv.style.display = 'block';       
+            nameSpan.textContent = name;
+        }
+      
+        smNameSpan.textContent=name;
     }
 }
 
@@ -49,6 +57,10 @@ function getLocation() {
 
 function displayLocation(location) {
 
-    locSpan.innerHTML = "Lat: " + location.coords.latitude.toFixed(2) +
+    if(locSpan){
+
+        locSpan.innerHTML = "Lat: " + location.coords.latitude.toFixed(2) +
         " , Lng: " + location.coords.longitude.toFixed(2);
+    }
+   
 }
