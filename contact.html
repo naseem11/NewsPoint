@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NewsPoint</title>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Google Fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
     <!-- User CSS -->
     <link rel="stylesheet" class="theme" href="css/styles.css">
 </head>
+
 <body>
     <header>
         <div id="welcome">
-            <span>Welcome ,  <span id="name"></span> </span><br><br>
-            <span >Your Location is : <span id="location"></span> </span>
+            <span>Welcome , <span id="name"></span> </span><br><br>
+            <span>Your Location is : <span id="location"></span> </span>
         </div>
         <h1 class="center">news point</h1>
         <span class="date-time "></span>
@@ -28,17 +31,17 @@
             <span class="menu-bar"></span>
         </div>
         <a id="home-link" href="index.html">
-			<div class="logo">NP
+            <div class="logo">NP
 
-			</div>
-		</a>
-         <div id="sm-welcome">
-			 Welcome !<br> <span id="sm-name"></span>
-		 </div>
-        
+            </div>
+        </a>
+        <div id="sm-welcome">
+            Welcome !<br> <span id="sm-name"></span>
+        </div>
+
         <ul>
             <li>
-                <a  href="index.html">Home</a>
+                <a href="index.html">Home</a>
             </li>
             <li>
                 <a href="sports.html">Sports</a>
@@ -65,17 +68,17 @@
             <li>
                 <a class="link-active" href="contact.html">Contact</a>
             </li>
-            
+
             <li>
                 <a href="preferences.html">Preferences</a>
             </li>
-            
+
         </ul>
-        
+
     </nav>
-    
+
     <main>
-        
+
         <span id="back-btn">
             <i class="fas fa-arrow-left"></i>
         </span>
@@ -84,35 +87,67 @@
         </span>
         <section class="section">
             <div class="svg-container">
-                <svg >
+                <svg>
                     <rect />
-                  </svg>
-                  <h3 class="category-heading">contact us</h3>
+                </svg>
+                <h3 class="category-heading">contact us</h3>
             </div>
 
             <div class="contact-container">
                 <div class="contact-form-container">
                     <h4>Your Details</h4>
-                    <form action="#" method="">
-                        <input type="text" name="firstname"  placeholder="First Name...">      
-                        <input type="text" name="lastname"  placeholder="Last Name..." >      
-                        <input type="email" name="email"  placeholder="Email..." >      
-                        <input type="text" name="phone"  placeholder="Phone...">     
-                        <textarea name="message"  placeholder="Message..." ></textarea> 
-                        <input type="submit" class="button" name="submit" value="Submit">   
-                     </form>
+                    <form action="http://www.codeschool.ie/php/sendEmail.php" method="post">
+                        <label for="name" class="label">Name</label>
+                        <input type="text" name="name" required>
+                        <!-- <input type="text" name="lastname" placeholder="Last Name..."> -->
+                        <label for="email" class="label">Email</label>
+                        <input type="email" name="email" required>
+                        <!-- <input type="text" name="phone" placeholder="Phone..."> -->
+                        <!-- <textarea name="message" placeholder="Message..."></textarea> -->
+                        <label for="dob" class="label">Date of Birth</label>
+                        <input type="date" name="dob" required>
+                        <label for="gender" class="label">Gender</label>
+                        <div class="input-group"><input type="radio" name="gender" value="male" checked> Male</div>
+                        <div class="input-group"><input type="radio" name="gender" value="female"> Female</div>
+                        <div class="input-group"><input type="radio" name="gender" value="other"> Other</div>
+                        <hr>
+                        <label for="general" class="label">What Information You Looking For ?</label>
+                        <div class="input-group"> <input type="checkbox" name="general" value="general" checked>General
+                        </div>
+                        <div class="input-group"><input type="checkbox" name="article" value="article">Specific Article
+                        </div>
+                        <div class="input-group"><input type="checkbox" name="author" value="author">Author</div>
+                        <hr>
+                        <textarea name="message" placeholder="Message..." required></textarea>
+                        <input type="submit" class="button" name="submit" value="Submit">
+                    </form>
                 </div>
                 <div class="contact-map-container">
-                   <h4>Find us Here</h4>
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d595.2857339992644!2d-6.549143170746852!3d53.358596799126715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486771b46641d12d%3A0x363806abb6015fe6!2sIIS+Space!5e0!3m2!1sen!2sie!4v1555451131694!5m2!1sen!2sie" width="100%" height="425"   allowfullscreen></iframe>
+                    <h4>Find us Here</h4>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d595.2857339992644!2d-6.549143170746852!3d53.358596799126715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486771b46641d12d%3A0x363806abb6015fe6!2sIIS+Space!5e0!3m2!1sen!2sie!4v1555451131694!5m2!1sen!2sie"
+                        width="100%" height="425" allowfullscreen></iframe>
                 </div>
             </div>
-            
+
         </section>
+        <footer>
+            <ul>
+                <li> <i class="far fa-copyright "></i> <span class="year">2019</span> FIT Celbridge</li>
+                <li>Developed By : Naseem Mian</li>
+                <li class="social"><a href="https://github.com/naseem11" target="_blank" target="_blank"><i
+                            class="fab fa-github-square"></i></a>
+                    <a href="https://linkedin.com/in/naseem-mian-5aa742149" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </li>
+
+            </ul>
+        </footer>
     </main>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/userNameAndLocation.js"></script>
 
-    
+
 </body>
+
 </html>

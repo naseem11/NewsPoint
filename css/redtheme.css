@@ -1,405 +1,218 @@
-header{
-    background-color: #8E0031;
-
-}
-nav{
-    background-color: #000;
+header {
+  background-color: #8E0031;
 }
 
-
+nav {
+  background-color: #000;
+}
 
 /* ======================================
             Html, Body
 ====================================== */
+a {
+  color: #fff;
+}
 
-
-
-  
-  
-  
- 
-  a{
-    
-    color:#fff;
-  }
-  
-  
-  
-  /* ===================================== */
-   
-  /* ======================================
+/* ===================================== */
+/* ======================================
                  Header
   ====================================== */
+header {
+  background-color: #8E0031;
+}
 
-  header {
-  
-    
-    background-color: #8E0031;
-   
-  }
-  
-  header h1 {
-   
-    color: #fff;
-  
-    
-  }
-  
-  header h1::after {
-   
-    background-color: #ff6117;
-   
-  }
-  
-  .date-time {
-   
-    color: #fff;
-   
-   
-    
-  }
+header h1 {
+  color: #fff;
+}
 
-  #welcome{
-  
-    color:#fff;
-   
-  }
- 
-  
-  /* ===================================== */
-  
-  
-  
-  
-  /* ======================================
+header h1::after {
+  background-color: #ff6117;
+}
+
+.date-time {
+  color: #fff;
+}
+
+#welcome {
+  color: #fff;
+}
+
+/* ===================================== */
+/* ======================================
                    Navbar
   ====================================== */
-  
-  nav {
- 
-    background-color: #000;
-    color: #fff;
-   
- 
-  }
-  
-  nav ul {
-   
-    background-color: #000;
-   
-  }
-  
+nav {
+  background-color: #000;
+  color: #fff;
+}
 
+nav ul {
+  background-color: #000;
+}
 
+nav ul li a {
+  color: #fff;
+}
 
- 
-  
-  nav ul li a {
-    color: #fff;
-   
-  }
-  
-  .link-active {
-    background-color: #fff;
-    color: #850e75;
-  }
+.link-active {
+  background-color: #fff;
+  color: #850e75;
+}
 
-  
-  
-  .menu-bar {
-    
-    background-color: #fff;
-  
-  }
-  
- 
- 
- 
-  /* Back and forward btn */
-  #back-btn,#forward-btn{
+.menu-bar {
+  background-color: #fff;
+}
 
-   
-    background-color: #fff;
-   
-  }
-  
- 
-  #back-btn:hover,#forward-btn:hover{
-    background-color: #ff570a;
-  }
-  
-  
-  /* ======================================
+/* Back and forward btn */
+#back-btn,
+#forward-btn {
+  background-color: #fff;
+}
+
+#back-btn:hover,
+#forward-btn:hover {
+  background-color: #ff570a;
+}
+
+/* ======================================
                Carousel
   ====================================== */
-  
-  
-  
-  
- 
-  
-  
-  
-  
-  .news-overlay {
-    background-color: rgba(0, 0, 0,.5);
-   
-    
-  }
-  
-  .news-overlay h2{
- 
-    color: #ff6117;  
-  
-  }
-  
-  
-  .news-text {
-   
-    color: #fff;
-    
-  }
-  .news-text h3 {
-    
-   
-    color: #fff;  
-    
-   
-   
-  }
- 
-  .article-link{
+.news-overlay {
+  background-color: rgba(0, 0, 0, .5);
+}
 
-   
-    background-color: #fff;
-    color: #850e75; 
-   
-    
-   
-  }
-  .article-link:hover{
-    background-color: #ff570a;
-    color:#fff;
-  }
+.news-overlay h2 {
+  color: #ff6117;
+}
 
+.news-text {
+  color: #fff;
+}
 
-  .prev, .next {
-   
-    color: white;
-    
-  }
-  
- 
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
- 
-  .dot {
-   
-    background-color: #bbb;
-   
-  }
-  
-  .active, .dot:hover {
-    background-color: #ff570a;
-  }
- 
-  
-  /* ==================================================== */
+.news-text h3 {
+  color: #fff;
+}
 
-  /* User Name  Input */
-  #user-name-input{ 
+.article-link {
+  background-color: #fff;
+  color: #850e75;
+}
 
-   
-    background-color: #c2c2c2;
-   
-  }
-  input#username{
-  
-    
-    border: 2px solid #ff570a;
-   
-  }
- 
-  
-  /* ======================================
+.article-link:hover {
+  background-color: #ff570a;
+  color: #fff;
+}
+
+.prev,
+.next {
+  color: white;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  background-color: #bbb;
+}
+
+.active,
+.dot:hover {
+  background-color: #ff570a;
+}
+
+/* ==================================================== */
+/* User Name  Input */
+#user-name-input {
+  background-color: #c2c2c2;
+}
+
+input#username {
+  border: 2px solid #ff570a;
+}
+
+/* ======================================
                   News Listing
   ====================================== */
-  
- 
-
-rect{
- 
-  fill:#ff570a;
+rect {
+  fill: #ff570a;
 }
-  
-  
-  .category-heading {
-  
-  
-    color: #000;
-  }
 
-  .category-heading::first-letter{
-    
-    color:#fff;
-   
-    
-  }
-  
-  .svg-container::after {
-   
-    background-color: #ff570a;
-   
-  }
+.category-heading {
+  color: #000;
+}
 
-  
-  .card{
-  
-    border: 1px solid #c2c2c2;
-   
-   
-  }
- 
- 
-  
- 
-  .card-right  p a{
-    
-    color:#ff6117;
-    
-    
-  } 
-  /* ========================================== */
+.category-heading::first-letter {
+  color: #fff;
+}
 
-  /* ======================================
+.svg-container::after {
+  background-color: #ff570a;
+}
+
+.card {
+  border: 1px solid #c2c2c2;
+}
+
+.card-right p a {
+  color: #ff6117;
+}
+
+/* ========================================== */
+/* ======================================
               Live News
   ====================================== */
- 
-
 /* ====================================== */
-
-
-
-  /* ======================================
+/* ======================================
               Preferences
   ====================================== */
+.options {
+  border: 1px solid #c2c2c2;
+}
 
- 
-  .options{
+.options h4 {
+  color: #fff;
+  background-color: #44001A;
+}
 
-  
-    border: 1px solid #c2c2c2;
-   
-  }
-  .options h4{
-    
-  
-    color: #fff;
-    background-color: #44001A;
-   
-  }
-  
- 
-  
+.button {
+  color: #fff;
+  background-color: #000;
+}
 
-  .button{
-  
-    color: #fff;
-    background-color: #000;
-   
-   
-   
-  }
+.button:hover {
+  background-color: #ff570a;
+}
 
-  .button:hover{
-    background-color: #ff570a;
-  }
+footer {
+  background-color: #000;
+}
 
- 
-  /* ======================================
+/* ======================================
               Media Queries
   ====================================== */
-  
-  /* Small devices (landscape phones, 576px and up) */
-  @media only screen
-  and (min-width: 320px) {
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 320px) {}
 
-   
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media only screen and (min-width: 768px) {}
 
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .news-text h3 {
+    color: #fff;
   }
-  
-  
-   
-      
-  
-  
-  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-  @media only screen 
-  and (min-width: 768px) {
-   
-  }
-  /* Large devices (desktops, 992px and up) */
-  @media only screen 
-  and (min-width: 992px) {
 
-
-  
-    
-
-  
-    
-    
-   
-    
-   
-    .news-text h3 {
-      
-    
-      color: #fff;    
-     
-     
-    }
-    
-   
-
-  
   /* News Listing */
-
-  
-  .card{
-   
+  .card {
     border-bottom: 1px solid #c2c2c2;
-   
+  }
 
-  }               
-  
- .card:nth-child(even){
-
+  .card:nth-child(even) {
     border-left: 1px solid #c2c2c2;
-  
   }
-  
- 
- 
-
- 
-  
-
-   
 }
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media only screen 
-  and (min-width: 1200px) {
-    
-      
-   
 
-   
-  
-    
-    
-  }
-  
-  
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
