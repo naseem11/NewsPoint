@@ -475,6 +475,9 @@ rect {
   height: 1px;
   margin: 10px auto;
 }
+#mis-head{
+  left:29%;
+}
 
 .news-cards {
   width: 100%;
@@ -551,12 +554,12 @@ rect {
 .tooltiptext {
   visibility: hidden;
   display: inline-block;
-  width: 120px;
+  width: 130px;
   height: 50px;
   background-color: #ff6117;
   color: #fff;
   text-align: center;
-  line-height: 35px;
+  line-height: 38px;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
@@ -593,7 +596,68 @@ rect {
   height: 100%;
 }
 
-/* ====================================== */
+
+/* ======================================
+             Miscellaneous
+  ====================================== */
+  .audio-video-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 150px;
+    margin-top: 100px;
+    padding-left: 100px;;
+  }
+  video{
+    outline: none;
+  }
+  .audio-container{
+    width: 50%;
+   
+  
+  }
+  .audio-container figure{
+    width:250px;
+    height: 250px;
+    margin-bottom: 30px;
+    
+  }
+  .disk-image{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;  
+    position: relative;
+    left:75%;  
+    animation: diskrotate 2s linear  ;
+    animation-play-state: paused;
+  }
+
+  .audio-container .button:nth-child(2){
+
+    margin-right: 100px;
+  }
+
+  .animate{
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+  }
+
+  .pause{
+    animation-play-state: paused;
+  }
+
+  @keyframes diskrotate{
+
+    0%{
+      transform: rotate(0deg) ;
+    }
+    
+    100%{
+      transform: rotate(360deg) ;
+    }
+  }
 /* ======================================
              Contact
   ====================================== */
@@ -623,6 +687,9 @@ rect {
 
 .contact-map-container {
   border-top: 1px solid #c2c2c2;
+}
+.contact-form-container h4{
+  padding-top: 20px;
 }
 
 form {
@@ -939,6 +1006,7 @@ footer li {
   .category-heading {
     font-size: 2.5rem;
   }
+ 
 
   /* Headlines  */
   .news-overlay h2 {
@@ -1109,5 +1177,8 @@ footer li {
 
   .category-heading {
     left: 40.5%;
+  }
+  #mis-head{
+    left:38%;
   }
 }
