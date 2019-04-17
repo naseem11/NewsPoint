@@ -2,10 +2,11 @@ export const UserInterface = function () {
 	const dateDiv = document.querySelector('.date-time');
 	const menuBtn = document.getElementById('menu-btn');
 	const menuPanel = document.querySelector('nav ul');
-	const menuLinks = document.querySelectorAll('nav ul li a');	
-	const backBtn=document.getElementById('back-btn');
-	const forwardBtn=document.getElementById('forward-btn');
-	
+	const menuLinks = document.querySelectorAll('nav ul li a');
+	const backBtn = document.getElementById('back-btn');
+	const forwardBtn = document.getElementById('forward-btn');
+	const welcomeDiv = document.getElementById('welcome');
+
 
 	function init() {
 
@@ -14,11 +15,11 @@ export const UserInterface = function () {
 
 
 	function _initialize() {
-	
+
 		_setDate(dateDiv);
 		_addEventListeners();
-		
-	
+
+
 
 	}
 	// _setDate function Start
@@ -47,7 +48,7 @@ export const UserInterface = function () {
 			0: "Sunday"
 
 		}
-		let today = new Date();		
+		let today = new Date();
 		const date = `${day[today.getDay()]} , ${month[today.getMonth()]} 
                     ${today.getDate()}, ${today.getFullYear()}`;
 		element.textContent = date;
@@ -55,29 +56,38 @@ export const UserInterface = function () {
 	}
 	// End of _setDate function
 
-	
-	
+
+
 
 	//  _addEventListeners function start
 
 	function _addEventListeners() {
 
 		menuBtn.addEventListener('click', _makeMenuPanelAppear);
-		
-		backBtn.addEventListener('click',()=>{
+
+		backBtn.addEventListener('click', () => {
 
 			history.back();
 		});
-		forwardBtn.addEventListener('click',()=>{
+		forwardBtn.addEventListener('click', () => {
 
 			history.forward();
 		});
-		
+
 		if (window.screen.width < 768) {
 
 			menuLinks.forEach(_delayLoadingPage)
 		}
-		
+		if (welcomeDiv) {
+
+			welcomeDiv.addEventListener('mouseover', (e) => {
+
+				e.target.style.left = '0';
+			});
+			welcomeDiv.addEventListener('mouseout', (e) => {
+				e.target.style.left = '-300px';
+			})
+		}
 
 	}
 
@@ -98,11 +108,13 @@ export const UserInterface = function () {
 		menuPanel.classList.toggle('appear');
 	}
 
-	
-	
-	
-	
-	
 
-	return {init};
+
+
+
+
+
+	return {
+		init
+	};
 }();

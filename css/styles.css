@@ -92,9 +92,10 @@ header h1::after {
   background-color: #d84d0d;
   color: #fff;
   top: 10px;
-  left: 0;
+  left: -300px;
   display: none;
   padding-top: 10px;
+  transition: left .5s ease-in;
   -webkit-clip-path: polygon(0% 0%, 100% 0, 90% 48%, 100% 100%, 0% 100%);
   clip-path: polygon(0% 0%, 100% 0, 90% 48%, 100% 100%, 0% 100%);
 }
@@ -104,6 +105,7 @@ header h1::after {
   letter-spacing: 1px;
   color: #fff;
   text-shadow: 0 0 2px #000;
+
 }
 
 #sm-welcome {
@@ -255,7 +257,7 @@ i.link-active {
 }
 
 /* ========================================= */
-/* ===================================== */
+
 /* ======================================
                Carousel
   ====================================== */
@@ -506,6 +508,7 @@ rect {
   background-size: cover;
   background-position: center;
   height: 200px;
+  position: relative;
 }
 
 .card-left img {
@@ -521,6 +524,7 @@ rect {
 .card-right {
   width: 100%;
   text-align: justify;
+
 }
 
 .card-right h4,
@@ -540,6 +544,29 @@ rect {
 .card-right p a {
   color: #ff6117;
   font-size: 21px;
+}
+
+/*********** Tooltip ******************/
+
+.tooltiptext {
+  visibility: hidden;
+  display: inline-block;
+  width: 120px;
+  height: 50px;
+  background-color: #ff6117;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  top: 20%;
+  left: 28%;
+  z-index: 1;
+}
+
+.card-left:hover .tooltiptext {
+  visibility: visible;
 }
 
 /* ========================================== */
@@ -971,6 +998,15 @@ footer li {
     margin-top: 0;
     font-size: 18px;
   }
+
+  .tooltiptext {
+
+
+    top: 20%;
+    left: 23%;
+
+  }
+
 
   /* User prefences */
   #preferences {
