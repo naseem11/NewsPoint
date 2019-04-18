@@ -5,7 +5,8 @@ export const UserInterface = function () {
 	const menuLinks = document.querySelectorAll('nav ul li a');
 	const backBtn = document.getElementById('back-btn');
 	const forwardBtn = document.getElementById('forward-btn');
-	const welcomeDiv = document.getElementById('welcome');
+
+
 
 
 	function init() {
@@ -78,16 +79,7 @@ export const UserInterface = function () {
 
 			menuLinks.forEach(_delayLoadingPage)
 		}
-		if (welcomeDiv) {
 
-			welcomeDiv.addEventListener('mouseover', (e) => {
-
-				e.target.style.left = '0';
-			});
-			welcomeDiv.addEventListener('mouseout', (e) => {
-				e.target.style.left = '-300px';
-			})
-		}
 
 	}
 

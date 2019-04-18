@@ -4,7 +4,8 @@ const userNameSection = document.getElementById('user-name-input');
 const welcomeDiv = document.getElementById('welcome');
 const nameSpan = document.getElementById('name');
 const locSpan = document.getElementById('location');
-const smNameSpan=document.getElementById('sm-name');
+const smNameSpan = document.getElementById('sm-name');
+
 
 
 // Check Local Storage for username
@@ -12,8 +13,9 @@ const smNameSpan=document.getElementById('sm-name');
 
 setUsername();
 getLocation();
-if(enterBtn){
-    
+locSpan.style.opacity = 0;
+if (enterBtn) {
+
     enterBtn.addEventListener('click', saveUsername);
 }
 
@@ -36,14 +38,27 @@ function setUsername() {
 
         userNameSection.style.display = 'block';
     } else {
-        let name=(JSON.parse(localStorage.getItem('userName')).name).toUpperCase();
-        if(welcomeDiv && nameSpan){
-            welcomeDiv.style.display = 'block';       
+        let name = (JSON.parse(localStorage.getItem('userName')).name).toUpperCase();
+        if (welcomeDiv && nameSpan) {
+            welcomeDiv.style.display = 'block';
             nameSpan.textContent = name;
         }
-      
-        smNameSpan.textContent=name;
+
+        smNameSpan.textContent = name;
     }
+}
+
+if (welcomeDiv) {
+
+    welcomeDiv.addEventListener('mouseover', (e) => {
+
+        e.target.style.left = '0';
+        locSpan.style.opacity = 1;
+    });
+    welcomeDiv.addEventListener('mouseout', (e) => {
+        e.target.style.left = '-300px';
+        locSpan.style.opacity = 0;
+    })
 }
 
 function getLocation() {
@@ -57,10 +72,10 @@ function getLocation() {
 
 function displayLocation(location) {
 
-    if(locSpan){
+    if (locSpan) {
 
         locSpan.innerHTML = "Lat: " + location.coords.latitude.toFixed(2) +
-        " , Lng: " + location.coords.longitude.toFixed(2);
+            " , Lng: " + location.coords.longitude.toFixed(2);
     }
-   
+
 }

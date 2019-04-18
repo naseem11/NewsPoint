@@ -43,10 +43,7 @@ export const Preferences = function () {
         }
     }
 
-    // if(preferences === undefined){
-    //     preferences = new Object();
 
-    // }
 
     if (localStorage.getItem("usersettings") === null) {
 

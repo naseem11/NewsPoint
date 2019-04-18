@@ -1,17 +1,4 @@
-/*=========== Default Theme ==============
-Fonts : Raleway, Open Sans.
------------------------------
-Colors :
-Moon Yellow : #f4c613
-Gray:         #212226
-White Smoke : #f4f4f4
-White :       #fff
-Black :       #000
---------------------------------
-=============================================*/
-/* ======================================
-            Html, Body
-====================================== */
+/* ====================================== Html, Body ====================================== */
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -19,7 +6,6 @@ Black :       #000
 
 body {
   margin: 0;
-  /* font-family: 'Lato', sans-serif; */
 }
 
 ::-webkit-scrollbar {
@@ -41,9 +27,7 @@ a {
 }
 
 /* ===================================== */
-/* ======================================
-                 Header
-  ====================================== */
+/* ====================================== Header ====================================== */
 header {
   min-width: 100%;
   height: 150px;
@@ -105,7 +89,7 @@ header h1::after {
   letter-spacing: 1px;
   color: #fff;
   text-shadow: 0 0 2px #000;
-
+  transition: all .3s ease .5s;
 }
 
 #sm-welcome {
@@ -113,9 +97,7 @@ header h1::after {
 }
 
 /* ===================================== */
-/* ======================================
-                   Navbar
-  ====================================== */
+/* ====================================== Navbar ====================================== */
 nav {
   min-width: 100%;
   height: 80px;
@@ -148,7 +130,8 @@ nav ul {
   padding-left: 0;
   opacity: .9;
   list-style: none;
-  /* height: calc(100% - 80px); */
+  /* height: calc(100% - 80px);
+  */
   -webkit-transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
   transition: all .3s ease-in;
@@ -257,10 +240,7 @@ i.link-active {
 }
 
 /* ========================================= */
-
-/* ======================================
-               Carousel
-  ====================================== */
+/* ====================================== Carousel ====================================== */
 .carousel-container {
   position: relative;
   width: 100%;
@@ -328,7 +308,8 @@ i.link-active {
   display: none;
 }
 
-.article-link {
+.article-link,
+.article-link:visited {
   display: inline-block;
   padding: 5px;
   background-color: #fff;
@@ -342,6 +323,10 @@ i.link-active {
 .article-link:hover {
   background-color: #ff570a;
   color: #fff;
+}
+
+.article-link:active {
+  padding: 7px;
 }
 
 .prev,
@@ -402,7 +387,7 @@ i.link-active {
 }
 
 /* ==================================================== */
-/* User Name  Input */
+/* User Name Input */
 #user-name-input {
   width: 90%;
   height: 200px;
@@ -421,9 +406,7 @@ input#username {
   outline: none;
 }
 
-/* ======================================
-                  News Listing
-  ====================================== */
+/* ====================================== News Listing ====================================== */
 .section {
   width: 80%;
   text-align: center;
@@ -475,8 +458,9 @@ rect {
   height: 1px;
   margin: 10px auto;
 }
-#mis-head{
-  left:29%;
+
+#mis-head {
+  left: 29%;
 }
 
 .news-cards {
@@ -527,7 +511,6 @@ rect {
 .card-right {
   width: 100%;
   text-align: justify;
-
 }
 
 .card-right h4,
@@ -550,7 +533,6 @@ rect {
 }
 
 /*********** Tooltip ******************/
-
 .tooltiptext {
   visibility: hidden;
   display: inline-block;
@@ -573,9 +555,7 @@ rect {
 }
 
 /* ========================================== */
-/* ======================================
-              Live News
-  ====================================== */
+/* ====================================== Live News ====================================== */
 #video-wrapper {
   width: 100%;
   margin: 50px auto;
@@ -596,71 +576,69 @@ rect {
   height: 100%;
 }
 
+/* ====================================== Miscellaneous ====================================== */
+.audio-video-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
 
-/* ======================================
-             Miscellaneous
-  ====================================== */
-  .audio-video-container{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 150px;
-    margin-top: 100px;
-    padding-left: 100px;;
-  }
-  video{
-    outline: none;
-  }
-  .audio-container{
-    width: 50%;
-   
-  
-  }
-  .audio-container figure{
-    width:250px;
-    height: 250px;
-    margin-bottom: 30px;
-    
-  }
-  .disk-image{
+.video-container {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
 
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;  
-    position: relative;
-    left:75%;  
-    animation: diskrotate 2s linear  ;
-    animation-play-state: paused;
-  }
+.audio-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
 
-  .audio-container .button:nth-child(2){
+video {
+  outline: none;
+  width: 100%;
+  object-fit: fill;
+  height: 200px;
+}
 
-    margin-right: 100px;
-  }
+.audio-container figure {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
 
-  .animate{
-    animation-play-state: running;
-    animation-iteration-count: infinite;
-  }
+.disk-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: diskrotate 2s linear;
+  animation-play-state: paused;
+}
 
-  .pause{
-    animation-play-state: paused;
+.animate {
+  animation-play-state: running;
+  animation-iteration-count: infinite;
+}
+
+.pause {
+  animation-play-state: paused;
+}
+
+@keyframes diskrotate {
+  0% {
+    transform: rotate(0deg);
   }
 
-  @keyframes diskrotate{
-
-    0%{
-      transform: rotate(0deg) ;
-    }
-    
-    100%{
-      transform: rotate(360deg) ;
-    }
+  100% {
+    transform: rotate(360deg);
   }
-/* ======================================
-             Contact
-  ====================================== */
+}
+
+/* ====================================== Contact ====================================== */
 .contact-container {
   width: 100%;
   margin-bottom: 150px;
@@ -688,7 +666,8 @@ rect {
 .contact-map-container {
   border-top: 1px solid #c2c2c2;
 }
-.contact-form-container h4{
+
+.contact-form-container h4 {
   padding-top: 20px;
 }
 
@@ -703,7 +682,6 @@ input,
 textarea {
   width: 100%;
   padding: 10px 20px;
-  /* margin: 8px 0; */
   display: inline-block;
   border: none;
   border-bottom: 1px solid #e8491d;
@@ -777,9 +755,7 @@ hr {
   box-shadow: 0 0 10px #3c3c3c;
 }
 
-/* ======================================
-              Preferences
-  ====================================== */
+/* ====================================== Preferences ====================================== */
 #preferences {
   width: 100%;
   margin: 30px auto 0 auto;
@@ -820,7 +796,8 @@ select,
 }
 
 #user-preference-btn {
-  /* width: 20%; */
+  /* width: 20%;
+  */
   margin-bottom: 30px;
   text-align: center;
 }
@@ -856,9 +833,7 @@ input[type="color"] {
   color: red;
 }
 
-/* ======================================
-              Footer
-  ====================================== */
+/* ====================================== Footer ====================================== */
 footer {
   width: 100%;
   height: 100px;
@@ -885,9 +860,7 @@ footer li {
   display: none;
 }
 
-/* ======================================
-              Media Queries
-  ====================================== */
+/* ====================================== Media Queries ====================================== */
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 320px) {}
 
@@ -975,7 +948,7 @@ footer li {
     height: 300px;
   }
 
-  /* User Name  Input */
+  /* User Name Input */
   #user-name-input {
     width: 50%;
     height: 300px;
@@ -1006,9 +979,8 @@ footer li {
   .category-heading {
     font-size: 2.5rem;
   }
- 
 
-  /* Headlines  */
+  /* Headlines */
   .news-overlay h2 {
     letter-spacing: 3px;
     font-size: 2.2em;
@@ -1035,9 +1007,7 @@ footer li {
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
     border: none;
-    /* position: relative; */
     border-bottom: 1px solid #c2c2c2;
-    /* padding-bottom: 25px; */
   }
 
   .card:nth-child(even) {
@@ -1068,13 +1038,45 @@ footer li {
   }
 
   .tooltiptext {
-
-
     top: 20%;
     left: 23%;
-
   }
 
+  /* Miscellaneous */
+  .audio-video-container {
+    margin-bottom: 200px;
+    margin-top: 100px;
+  }
+
+  .video-container {
+    width: 50%;
+    border-right: 1px solid #c2c2c2;
+    height: 400px;
+  }
+
+  .audio-container {
+    width: 50%;
+    margin-top: 30px;
+  }
+
+  video {
+    padding-right: 20px;
+    height: 400px;
+  }
+
+  .audio-container figure {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+
+  .disk-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 
   /* User prefences */
   #preferences {
@@ -1125,7 +1127,6 @@ footer li {
     margin-left: 40%;
   }
 
-
   /* footer */
   footer li {
     font-size: 16px;
@@ -1135,19 +1136,7 @@ footer li {
     display: block;
   }
 
-  /* .source{
-    width: 80%;    
-    height: 20px;
-    position: absolute;
-    left:0;
-    bottom: 5px;
-    display: flex;
-    justify-content: space-around;
-  } */
-  /* .source-info{
-  color:lightslategray;
-  }
-  */
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -1172,13 +1161,14 @@ footer li {
 
   rect {
     height: 110px;
-    ;
+
   }
 
   .category-heading {
     left: 40.5%;
   }
-  #mis-head{
-    left:38%;
+
+  #mis-head {
+    left: 38%;
   }
 }
