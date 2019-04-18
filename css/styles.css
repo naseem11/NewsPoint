@@ -108,7 +108,7 @@ nav {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-left: 30px;
   padding-right: 30px;
   -ms-flex-wrap: nowrap;
@@ -130,8 +130,7 @@ nav ul {
   padding-left: 0;
   opacity: .9;
   list-style: none;
-  /* height: calc(100% - 80px);
-  */
+  height: calc(100% - 80px); 
   -webkit-transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
   transition: all .3s ease-in;
@@ -405,7 +404,7 @@ input#username {
   border: 2px solid #ff570a;
   outline: none;
 }
-
+ 
 /* ====================================== News Listing ====================================== */
 .section {
   width: 80%;

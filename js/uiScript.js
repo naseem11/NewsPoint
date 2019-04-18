@@ -7,8 +7,7 @@ export const UserInterface = function () {
 	const forwardBtn = document.getElementById('forward-btn');
 
 
-
-
+	
 	function init() {
 
 		_initialize();
