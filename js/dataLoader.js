@@ -31,7 +31,7 @@ export const DataLoader = function () {
     }
 
     function _renderData(json) {
-        console.log(json);
+
         const carouselContainer = document.querySelector('.carousel-container');
         for (let i = 0; i < 3; i++) {
             let title = (json.articles[i].title).slice(0, (json.articles[i].title).lastIndexOf('-'));
