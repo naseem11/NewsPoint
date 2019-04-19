@@ -13,7 +13,11 @@ const smNameSpan = document.getElementById('sm-name');
 
 setUsername();
 getLocation();
-locSpan.style.opacity = 0;
+if(locSpan){
+
+    locSpan.style.opacity = 0;
+}
+
 if (enterBtn) {
 
     enterBtn.addEventListener('click', saveUsername);
@@ -53,11 +57,17 @@ if (welcomeDiv) {
     welcomeDiv.addEventListener('mouseover', (e) => {
 
         e.target.style.left = '0';
-        locSpan.style.opacity = 1;
+        if(locSpan){
+
+            locSpan.style.opacity = 1;
+        }
     });
     welcomeDiv.addEventListener('mouseout', (e) => {
         e.target.style.left = '-300px';
-        locSpan.style.opacity = 0;
+        if(locSpan){
+            
+            locSpan.style.opacity = 0;
+        }
     })
 }
 

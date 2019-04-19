@@ -30,8 +30,12 @@ export const DataLoader = function () {
         return category === 'index' ? 'general' : category || 'general';
     }
 
+<<<<<<< HEAD
     function _renderData(json) {
 
+=======
+    function _renderData(json) {      
+>>>>>>> 3bfc051e75217989bee5cff790e0c20218a86568
         const carouselContainer = document.querySelector('.carousel-container');
         for (let i = 0; i < 3; i++) {
             let title = (json.articles[i].title).slice(0, (json.articles[i].title).lastIndexOf('-'));
