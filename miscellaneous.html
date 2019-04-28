@@ -8,7 +8,7 @@
     <title>NewsPoint</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Google Fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> -->
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -33,7 +33,7 @@
         </div>
         <a id="home-link" href="index.html">
             <div class="logo">NP
-
+                
             </div>
         </a>
         <div id="sm-welcome">
@@ -44,7 +44,7 @@
                 <a href="index.html">Home</a>
             </li>
             <li>
-                <a href="sports.html">Sports</a>
+                <a href="sports.html">Sport</a>
             </li>
             <li>
                 <a href="technology.html">Technology</a>
@@ -56,12 +56,12 @@
                 <a href="business.html">Business</a>
             </li>
             <!-- <li>
-				<a href="science.html">Science</a>
-			</li>
-			<li>
-				<a href="health.html">Health</a>
-				
-			</li> -->
+                <a href="science.html">Science</a>
+            </li>
+            <li>
+                <a href="health.html">Health</a>
+                
+            </li> -->
             <li>
                 <a href="livenews.html">Live News</a>
             </li>
@@ -69,29 +69,29 @@
                 <a class="link-active" href="miscellaneous.html">Miscellaneous</a>
             </li>
             <li>
-
+                
                 <a href="contact.html">Contact</a>
             </li>
-
+            
             <li>
                 <a href="preferences.html">Preferences</a>
             </li>
-
+            
         </ul>
-
+        
     </nav>
-
+    
     <main>
-
+        
         <span id="back-btn">
             <i class="fas fa-arrow-left"></i>
         </span>
         <span id="forward-btn">
             <i class="fas fa-arrow-right"></i>
         </span>
-
-
-
+        
+        
+        
         <section class="section">
             <div class="svg-container">
                 <svg>
@@ -99,45 +99,93 @@
                 </svg>
                 <h3 class="category-heading" id="mis-head">Miscellaneous</h3>
             </div>
-
+            
         </section>
         <section class="section">
             <div class="audio-video-container">
-                <div class="video-container">
-                    <video controls>
-                        <source src="video/bunny.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="album-table-container">
+                    <table>
+                        <caption>Songs</caption>
+                        <thead>                            
+                            <tr>
+                                <th>Song</th>
+                                <th>Artist</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Someone you loved </td>
+                                <td>Lewis Capaldi</td>
+                                <td><i class="fas fa-play-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Chasing cars</td>
+                                <td>Snow Patrol</td>
+                                <td><i class="fas fa-play-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>The man who can't be moved </td>
+                                <td>The Script</td>
+                                <td><i class="fas fa-play-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Song name</td>
+                                <td>Song Artist</td>
+                                <td><i class="fas fa-play-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Song name</td>
+                                <td>Song Artist</td>
+                                <td><i class="fas fa-play-circle"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Song name</td>
+                                <td>Song Artist</td>
+                                <td><i class="fas fa-play-circle"></i></td>
+                            </tr>
+                            
+                        </tbody>
+                        
+                    </table>
                 </div>
                 <div class="audio-container">
                     <figure>
                         <img src="images/vinyl.png" class="disk-image" alt="vinyl image">
-
+                        
                     </figure>
                     <button class="button">Play</button>
                     <button class="button">Pause</button>
+                    <button class="button">F.Forward</button>
                     <button class="button">Stop</button>
-
+                    
                 </div>
-
-            </div>
-        </section>
-        <footer>
-            <ul>
-                <li> <i class="far fa-copyright "></i> <span class="year">2019</span> FIT Celbridge</li>
-                <li>Developed By : Naseem Mian</li>
-                <li class="social"><a href="https://github.com/naseem11" target="_blank"><i
-                            class="fab fa-github-square"></i></a>
-                    <a href="https://linkedin.com/in/naseem-mian-5aa742149" target="_blank"><i
+                
+                <div class="video-container">
+                    <video controls>
+                        <source src="video/bunny.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                </div>
+            </section>
+            <footer>
+                <ul>
+                    <li> <i class="far fa-copyright "></i> <span class="year">2019</span> FIT Celbridge</li>
+                    <li>Developed By : Naseem Mian</li>
+                    <li class="social"><a href="https://github.com/naseem11" target="_blank"><i
+                        class="fab fa-github-square"></i></a>
+                        <a href="https://linkedin.com/in/naseem-mian-5aa742149" target="_blank"><i
                             class="fab fa-linkedin"></i></a>
-                </li>
-
-            </ul>
-        </footer>
-    </main>
-    <script type="module" src="js/main.js"></script>
-    <script src="js/miscellaneous.js"></script>
-
-</body>
-
-</html>
+                        </li>
+                        
+                    </ul>
+                </footer>
+            </main>
+            <script type="module" src="js/main.js"></script>
+            <script src="js/miscellaneous.js"></script>
+            
+        </body>
+        
+        </html>
