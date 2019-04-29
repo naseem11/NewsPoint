@@ -773,8 +773,9 @@ input[type="checkbox"] {
   margin-top: 30px;
 }
 
-input[type="submit"] {
-  margin-left: 34%;
+input[type="submit"],
+input[type='reset'] {
+  margin-left: 30%;
 }
 
 hr {
@@ -1189,8 +1190,10 @@ footer li {
     margin-left: 20px;
   }
 
-  input[type="submit"] {
-    margin-left: 40%;
+
+
+  input[type='reset'] {
+    margin-left: 50px;
   }
 
   /* footer */
