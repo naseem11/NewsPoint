@@ -13,7 +13,7 @@ const smNameSpan = document.getElementById('sm-name');
 
 setUsername();
 getLocation();
-if(locSpan){
+if (locSpan) {
 
     locSpan.style.opacity = 0;
 }
@@ -31,6 +31,7 @@ function saveUsername() {
     localStorage.setItem('userName', JSON.stringify(nameObject));
     userNameSection.style.display = 'none';
     setUsername();
+    getLocation();
 
 
 
@@ -57,15 +58,15 @@ if (welcomeDiv) {
     welcomeDiv.addEventListener('mouseover', (e) => {
 
         e.target.style.left = '0';
-        if(locSpan){
+        if (locSpan) {
 
             locSpan.style.opacity = 1;
         }
     });
     welcomeDiv.addEventListener('mouseout', (e) => {
         e.target.style.left = '-300px';
-        if(locSpan){
-            
+        if (locSpan) {
+
             locSpan.style.opacity = 0;
         }
     })
