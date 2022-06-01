@@ -1,7 +1,7 @@
 import { Carousel } from "./carousel.js";
 import { Preferences } from "./preferences.js";
 export const DataLoader = (function() {
-  const apiKey = "9f3a40a50d454978844ef44d9f323b71";
+  const apiKey = "09d44b128ebf48fa8faae290122c6896";
   const country = "ie";
 
   function load() {
