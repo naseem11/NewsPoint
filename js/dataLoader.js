@@ -41,12 +41,13 @@ export const DataLoader = (function() {
           json.articles[i].content ||
           json.articles[i].description ||
           ""
-        ).substr(0, 261);
+        ).substr(0, 200);
+
         const neswDiv = document.createElement("div");
-        neswDiv.classList.add("news");
+        neswDiv.classList.add("news");        
         neswDiv.innerHTML = `
                 <figure class="news-image">
-                <img src="${json.articles[i].urlToImage}"  alt="">
+                <img src="${json.articles[i].urlToImage}"  alt="Image not available">
                 </figure>
              <div class="news-overlay">
                 <h2>Headlines</h2>
@@ -72,7 +73,8 @@ export const DataLoader = (function() {
           json.articles[i].content ||
           json.articles[i].description ||
           ""
-        ).substr(0, 261);
+        ).substr(0, 200);
+        console.log(content);
         const cardDiv = document.createElement("div");
         cardDiv.classList.add("card");
         cardDiv.innerHTML = `
